@@ -291,6 +291,18 @@ class TimeGoVC: UIViewController {
                     
                 }
                 
+                guard let vcName = UIStoryboard(name: "Result",
+                                                bundle: nil).instantiateViewController(
+                                                    withIdentifier: "ResultVC") as? ResultVC
+                    else{
+                        return
+                }
+                vcName.names = namesForNext
+                vcName.percents = percentForNext
+                
+                self.present(vcName, animated: true, completion: nil)
+                
+                
                 print(namesForNext)
                 print(percentForNext)
                 

@@ -11,7 +11,7 @@
         <!--ResultVC-->
         <scene sceneID="VjV-5G-LuT">
             <objects>
-                <viewController id="WMx-Jh-4qE" customClass="ResultVC" customModule="Marshmallow_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultVC" title="ResultVC" id="WMx-Jh-4qE" customClass="ResultVC" customModule="Marshmallow_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nJv-cJ-b76">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,6 +33,9 @@
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="result_ic_close"/>
+                                        <connections>
+                                            <action selector="xButtonAction:" destination="WMx-Jh-4qE" eventType="touchUpInside" id="QJn-Ub-jlH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>

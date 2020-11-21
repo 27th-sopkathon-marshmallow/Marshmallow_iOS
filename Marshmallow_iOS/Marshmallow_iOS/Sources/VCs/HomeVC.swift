@@ -8,10 +8,10 @@
 import UIKit
 
 class HomeVC: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -25,4 +25,20 @@ class HomeVC: UIViewController {
         self.present(dvc, animated: true, completion: nil)
     }
     
+    
+    @IBAction func createButtonAction(_ sender: Any) {
+        guard let vcName = UIStoryboard(name: "MashmallowCreate",
+                                        bundle: nil).instantiateViewController(
+                                            withIdentifier: "MashmallowCreateVC") as? MashmallowCreateVC
+        else{
+            return
+            
+            
+        }
+        vcName.modalPresentationStyle = .fullScreen
+        self.present(vcName, animated: true, completion: nil)
+        
+        
+    }
+
 }

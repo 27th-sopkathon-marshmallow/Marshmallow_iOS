@@ -31,6 +31,7 @@
                                 </constraints>
                                 <state key="normal" image="main_btn_createroom"/>
                                 <connections>
+                                    <action selector="createButtonAction:" destination="c4H-BL-QnX" eventType="touchUpInside" id="fCy-pi-bir"/>
                                     <action selector="touchUpCreate:" destination="c4H-BL-QnX" eventType="touchUpInside" id="xN1-a9-ofr"/>
                                 </connections>
                             </button>

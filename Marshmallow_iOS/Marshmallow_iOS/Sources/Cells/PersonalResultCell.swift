@@ -25,6 +25,13 @@ class PersonalResultCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setItems(userName : String, per : Int){
+        self.userName.text = userName
+        self.resultPercentage.text = String(per)
+        
+        
+    }
+    
     
 
 }
