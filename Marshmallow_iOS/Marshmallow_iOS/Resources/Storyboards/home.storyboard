@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c4H-BL-QnX">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HomeVC-->
+        <scene sceneID="0ZJ-Tz-oNv">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" id="c4H-BL-QnX" customClass="HomeVC" customModule="Marshmallow_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U5Y-WP-adq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHD-qF-FO6">
+                                <rect key="frame" x="101.33333333333333" y="543" width="172.33333333333337" height="33.666666666666629"/>
+                                <string key="text">마시멜로를 얻으러 떠나볼까요?
+방을 생성해주세요!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ftZ-kx-gFg">
+                                <rect key="frame" x="78" y="616.66666666666663" width="219" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ftZ-kx-gFg" secondAttribute="height" multiplier="73:16" id="4eh-Zs-A04"/>
+                                </constraints>
+                                <state key="normal" image="main_btn_createroom"/>
+                                <connections>
+                                    <action selector="touchUpCreate:" destination="c4H-BL-QnX" eventType="touchUpInside" id="xN1-a9-ofr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6R-UF-Vzt">
+                                <rect key="frame" x="78" y="675.66666666666663" width="219" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="H6R-UF-Vzt" secondAttribute="height" multiplier="73:16" id="Gbr-KC-CYN"/>
+                                </constraints>
+                                <state key="normal" image="main_btn_enterroom"/>
+                                <connections>
+                                    <action selector="touchUpEnter:" destination="c4H-BL-QnX" eventType="touchUpInside" id="Dbe-BY-eb9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마시멜로 만들기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmM-yB-MWf">
+                                <rect key="frame" x="137" y="632.66666666666663" width="101" height="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="초대코드 입력" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIU-5A-zeG">
+                                <rect key="frame" x="144" y="691.66666666666663" width="87" height="19.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="main_img_graphic" translatesAutoresizingMaskIntoConstraints="NO" id="WeP-Np-gaB">
+                                <rect key="frame" x="69" y="198" width="236" height="235"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GsM-jn-ctq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ftZ-kx-gFg" firstAttribute="top" secondItem="eHD-qF-FO6" secondAttribute="bottom" constant="40" id="7uA-ir-kWl"/>
+                            <constraint firstItem="GsM-jn-ctq" firstAttribute="bottom" secondItem="H6R-UF-Vzt" secondAttribute="bottom" constant="54.333333333333371" id="8gq-5Y-9Tb"/>
+                            <constraint firstItem="pIU-5A-zeG" firstAttribute="centerX" secondItem="U5Y-WP-adq" secondAttribute="centerX" id="F5t-j4-qwc"/>
+                            <constraint firstItem="pIU-5A-zeG" firstAttribute="top" secondItem="ftZ-kx-gFg" secondAttribute="bottom" constant="27" id="JbD-g9-4v7"/>
+                            <constraint firstItem="tmM-yB-MWf" firstAttribute="top" secondItem="eHD-qF-FO6" secondAttribute="bottom" constant="56" id="Lr6-DI-XGF"/>
+                            <constraint firstItem="WeP-Np-gaB" firstAttribute="centerX" secondItem="U5Y-WP-adq" secondAttribute="centerX" id="PjF-5M-nN5"/>
+                            <constraint firstItem="eHD-qF-FO6" firstAttribute="centerX" secondItem="U5Y-WP-adq" secondAttribute="centerX" id="VUz-R1-qQT"/>
+                            <constraint firstItem="ftZ-kx-gFg" firstAttribute="centerX" secondItem="U5Y-WP-adq" secondAttribute="centerX" id="Yjs-fz-yTH"/>
+                            <constraint firstItem="H6R-UF-Vzt" firstAttribute="centerX" secondItem="U5Y-WP-adq" secondAttribute="centerX" id="ZXb-bz-9m9"/>
+                            <constraint firstItem="tmM-yB-MWf" firstAttribute="centerX" secondItem="U5Y-WP-adq" secondAttribute="centerX" id="adL-l5-rtj"/>
+                            <constraint firstItem="WeP-Np-gaB" firstAttribute="top" secondItem="GsM-jn-ctq" secondAttribute="top" constant="154" id="ha3-nf-AWE"/>
+                            <constraint firstItem="H6R-UF-Vzt" firstAttribute="top" secondItem="ftZ-kx-gFg" secondAttribute="bottom" constant="11" id="t7d-W6-goo"/>
+                            <constraint firstItem="WeP-Np-gaB" firstAttribute="leading" secondItem="GsM-jn-ctq" secondAttribute="leading" constant="69" id="wIx-lm-ddS"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SoE-Id-CDC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-413" y="-119"/>
+        </scene>
+        <!--Home PopVC-->
+        <scene sceneID="WDt-Vj-1Ns">
+            <objects>
+                <viewController storyboardIdentifier="HomePopVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="EAA-Gd-eGg" customClass="HomePopVC" customModule="Marshmallow_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pWT-sc-9n5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="section_invite" translatesAutoresizingMaskIntoConstraints="NO" id="uuY-Ae-Uxe">
+                                <rect key="frame" x="50.666666666666657" y="311" width="274" height="138"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="초대코드 입력" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOl-M2-XmO">
+                                <rect key="frame" x="144" y="330" width="87" height="19.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoV-70-RRj">
+                                <rect key="frame" x="289" y="327" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CoV-70-RRj" secondAttribute="height" multiplier="1:1" id="DbN-TG-lAh"/>
+                                </constraints>
+                                <state key="normal" image="result_ic_close"/>
+                                <connections>
+                                    <action selector="touchUpClose:" destination="EAA-Gd-eGg" eventType="touchUpInside" id="6hN-Gx-dL8"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="invite_line_pink" translatesAutoresizingMaskIntoConstraints="NO" id="Xhd-0Z-tU4">
+                                <rect key="frame" x="82.666666666666671" y="415" width="209.66666666666663" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="gsb-iq-gR3"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="초대코드를 복사해주세요" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U5k-3I-K5S">
+                                <rect key="frame" x="112.33333333333333" y="387.33333333333331" width="150.33333333333337" height="18.666666666666686"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="U5k-3I-K5S" secondAttribute="height" multiplier="137:17" id="NMq-Pf-jc4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypI-Ge-7eY">
+                                <rect key="frame" x="50.666666666666657" y="449" width="274" height="48"/>
+                                <state key="normal" image="invite_btn_fin"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="확인" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzV-dh-BuR">
+                                <rect key="frame" x="173.66666666666666" y="461" width="28" height="19.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7fx-MH-2KU"/>
+                        <constraints>
+                            <constraint firstItem="U5k-3I-K5S" firstAttribute="centerX" secondItem="pWT-sc-9n5" secondAttribute="centerX" id="4yx-mV-YQu"/>
+                            <constraint firstItem="ypI-Ge-7eY" firstAttribute="top" secondItem="uuY-Ae-Uxe" secondAttribute="bottom" id="B8t-4E-QFI"/>
+                            <constraint firstItem="Xhd-0Z-tU4" firstAttribute="centerX" secondItem="pWT-sc-9n5" secondAttribute="centerX" id="CSZ-Vi-Y3J"/>
+                            <constraint firstItem="CoV-70-RRj" firstAttribute="top" secondItem="7fx-MH-2KU" secondAttribute="top" constant="283" id="Cl1-xr-NPo"/>
+                            <constraint firstItem="ypI-Ge-7eY" firstAttribute="centerX" secondItem="pWT-sc-9n5" secondAttribute="centerX" id="DTM-fl-H9k"/>
+                            <constraint firstItem="BzV-dh-BuR" firstAttribute="top" secondItem="uuY-Ae-Uxe" secondAttribute="bottom" constant="12" id="DcT-I8-R1a"/>
+                            <constraint firstItem="uuY-Ae-Uxe" firstAttribute="centerX" secondItem="pWT-sc-9n5" secondAttribute="centerX" id="KbF-wo-nxg"/>
+                            <constraint firstItem="kOl-M2-XmO" firstAttribute="top" secondItem="7fx-MH-2KU" secondAttribute="top" constant="286" id="Lcx-Dj-0Eh"/>
+                            <constraint firstItem="Xhd-0Z-tU4" firstAttribute="top" secondItem="U5k-3I-K5S" secondAttribute="bottom" constant="9" id="PEa-KO-gFB"/>
+                            <constraint firstItem="U5k-3I-K5S" firstAttribute="top" secondItem="pWT-sc-9n5" secondAttribute="top" constant="387.33333333333326" id="PmC-ha-fzX"/>
+                            <constraint firstItem="kOl-M2-XmO" firstAttribute="centerX" secondItem="pWT-sc-9n5" secondAttribute="centerX" id="QAx-Kl-EBM"/>
+                            <constraint firstItem="Xhd-0Z-tU4" firstAttribute="leading" secondItem="pWT-sc-9n5" secondAttribute="leadingMargin" constant="66.666666666666686" id="U95-Uu-sLe"/>
+                            <constraint firstItem="uuY-Ae-Uxe" firstAttribute="top" secondItem="7fx-MH-2KU" secondAttribute="top" constant="267" id="Zey-hn-Q9B"/>
+                            <constraint firstItem="CoV-70-RRj" firstAttribute="leading" secondItem="kOl-M2-XmO" secondAttribute="trailing" constant="58" id="ZxE-Dk-WRr"/>
+                            <constraint firstItem="BzV-dh-BuR" firstAttribute="centerX" secondItem="pWT-sc-9n5" secondAttribute="centerX" id="eWQ-Hd-FVS"/>
+                            <constraint firstItem="ypI-Ge-7eY" firstAttribute="top" secondItem="Xhd-0Z-tU4" secondAttribute="bottom" constant="32" id="gN2-8d-JwD"/>
+                            <constraint firstItem="U5k-3I-K5S" firstAttribute="leading" secondItem="7fx-MH-2KU" secondAttribute="leading" constant="112.33333333333331" id="vwR-Qo-dit"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wib-x3-IYi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="260" y="-120"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="invite_btn_fin" width="274" height="48"/>
+        <image name="invite_line_pink" width="210" height="2"/>
+        <image name="main_btn_createroom" width="219" height="48"/>
+        <image name="main_btn_enterroom" width="219" height="48"/>
+        <image name="main_img_graphic" width="236" height="235"/>
+        <image name="result_ic_close" width="24" height="24"/>
+        <image name="section_invite" width="274" height="138"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
