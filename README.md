@@ -26,9 +26,12 @@
 
 * <b> SOPT 27th SOPTKATHON
 * 프로젝트 기간: 2020.11.21 ~ 2020.11.22
-* 마시멜로는 ~~~한  어플리케이션입니다.
+* 마시멜로는 내가 좋아하는 중독적인 일을 원동력으로 활용할 수 있는 서비스입니다.
 
-//이미지 넣기
+
+<img style="border: 1px solid black !important; border-radius:20px; " src="https://user-images.githubusercontent.com/63224278/99884819-3e6b9b00-2c74-11eb-81d1-e6ccde999214.png" width="256px" height = "256px" />
+
+
 
 #### AutoLayout
 - iPhone 11 pro
@@ -48,6 +51,7 @@
 | Alamofire   | 서버 통신 | 5.2.1 |
 | Kingfisher  | 이미지 처리 | 5.14.0 |
 | SnapKit  | 오토레이아웃 | 5.0.1 |
+| Then  | 코드로 뷰 만들기 | 2.7.0 |
 
 
 <br>
