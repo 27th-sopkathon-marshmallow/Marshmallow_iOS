@@ -19,6 +19,14 @@
 		33DCB411256965B100DDF92B /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB410256965B100DDF92B /* Cells.swift */; };
 		33DCB414256965BC00DDF92B /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB413256965BC00DDF92B /* Fonts.swift */; };
 		33DCB417256965DE00DDF92B /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB416256965DE00DDF92B /* APIConstants.swift */; };
+
+		33DCB41B256970AC00DDF92B /* MashmallowCreate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33DCB41A256970AC00DDF92B /* MashmallowCreate.storyboard */; };
+		33DCB41E256970EF00DDF92B /* MashmallowCreateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB41D256970EF00DDF92B /* MashmallowCreateVC.swift */; };
+		33DCB422256974A000DDF92B /* SetGoalAndTimeTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB421256974A000DDF92B /* SetGoalAndTimeTVCell.swift */; };
+		33DCB426256974E400DDF92B /* SetNicknameTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB425256974E400DDF92B /* SetNicknameTVCell.swift */; };
+		33DCB4292569750900DDF92B /* SetToDoListTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB4282569750900DDF92B /* SetToDoListTVCell.swift */; };
+		33DCB43225697AB000DDF92B /* CompleteBtnTouchTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB43125697AB000DDF92B /* CompleteBtnTouchTVCell.swift */; };
+
 		ECDA3C4E25696990000554A5 /* TimeGo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECDA3C4D25696990000554A5 /* TimeGo.storyboard */; };
 		ECDA3C51256969AB000554A5 /* TimeGoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C50256969AB000554A5 /* TimeGoVC.swift */; };
 		ECDA3C5525696EDD000554A5 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C5425696EDD000554A5 /* CircularProgressView.swift */; };
@@ -26,6 +34,7 @@
 		ECDA3C5C256973E5000554A5 /* TimeGoUsersCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C5B256973E5000554A5 /* TimeGoUsersCVC.swift */; };
 		ECDA3C5F2569742F000554A5 /* TimeGoUnderCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C5E2569742F000554A5 /* TimeGoUnderCVC.swift */; };
 		ECDA3C6225697532000554A5 /* TimeGoTodoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C6125697532000554A5 /* TimeGoTodoCVC.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +52,12 @@
 		33DCB410256965B100DDF92B /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
 		33DCB413256965BC00DDF92B /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		33DCB416256965DE00DDF92B /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		33DCB41A256970AC00DDF92B /* MashmallowCreate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MashmallowCreate.storyboard; sourceTree = "<group>"; };
+		33DCB41D256970EF00DDF92B /* MashmallowCreateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MashmallowCreateVC.swift; sourceTree = "<group>"; };
+		33DCB421256974A000DDF92B /* SetGoalAndTimeTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGoalAndTimeTVCell.swift; sourceTree = "<group>"; };
+		33DCB425256974E400DDF92B /* SetNicknameTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNicknameTVCell.swift; sourceTree = "<group>"; };
+		33DCB4282569750900DDF92B /* SetToDoListTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetToDoListTVCell.swift; sourceTree = "<group>"; };
+		33DCB43125697AB000DDF92B /* CompleteBtnTouchTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteBtnTouchTVCell.swift; sourceTree = "<group>"; };
 		C388999A73FCABC558C64810 /* Pods-Marshmallow_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marshmallow_iOS.release.xcconfig"; path = "Target Support Files/Pods-Marshmallow_iOS/Pods-Marshmallow_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		ECDA3C4D25696990000554A5 /* TimeGo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeGo.storyboard; sourceTree = "<group>"; };
 		ECDA3C50256969AB000554A5 /* TimeGoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeGoVC.swift; sourceTree = "<group>"; };
@@ -123,7 +138,11 @@
 			isa = PBXGroup;
 			children = (
 				33DCB3DF2569634500DDF92B /* ViewController.swift */,
+
+				33DCB41D256970EF00DDF92B /* MashmallowCreateVC.swift */,
+
 				ECDA3C50256969AB000554A5 /* TimeGoVC.swift */,
+
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -133,7 +152,11 @@
 			children = (
 				33DCB3E62569634600DDF92B /* LaunchScreen.storyboard */,
 				33DCB3E12569634500DDF92B /* Main.storyboard */,
+
+				33DCB41A256970AC00DDF92B /* MashmallowCreate.storyboard */,
+
 				ECDA3C4D25696990000554A5 /* TimeGo.storyboard */,
+
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -157,6 +180,7 @@
 		33DCB3FE2569655300DDF92B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				33DCB4202569744E00DDF92B /* MashmallowCreate */,
 				33DCB410256965B100DDF92B /* Cells.swift */,
 				ECDA3C582569735C000554A5 /* TimeGoWholeCVC.swift */,
 				ECDA3C5B256973E5000554A5 /* TimeGoUsersCVC.swift */,
@@ -180,6 +204,17 @@
 				33DCB4012569658500DDF92B /* GenericResponse.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		33DCB4202569744E00DDF92B /* MashmallowCreate */ = {
+			isa = PBXGroup;
+			children = (
+				33DCB421256974A000DDF92B /* SetGoalAndTimeTVCell.swift */,
+				33DCB425256974E400DDF92B /* SetNicknameTVCell.swift */,
+				33DCB4282569750900DDF92B /* SetToDoListTVCell.swift */,
+				33DCB43125697AB000DDF92B /* CompleteBtnTouchTVCell.swift */,
+			);
+			path = MashmallowCreate;
 			sourceTree = "<group>";
 		};
 		69A0F060C4829F9B711955B6 /* Frameworks */ = {
@@ -270,6 +305,7 @@
 				ECDA3C4E25696990000554A5 /* TimeGo.storyboard in Resources */,
 				33DCB3E52569634600DDF92B /* Assets.xcassets in Resources */,
 				33DCB3E32569634500DDF92B /* Main.storyboard in Resources */,
+				33DCB41B256970AC00DDF92B /* MashmallowCreate.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,12 +359,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				33DCB414256965BC00DDF92B /* Fonts.swift in Sources */,
+
+				33DCB426256974E400DDF92B /* SetNicknameTVCell.swift in Sources */,
+				33DCB4062569658F00DDF92B /* File.swift in Sources */,
+				33DCB411256965B100DDF92B /* Cells.swift in Sources */,
+				33DCB4022569658500DDF92B /* GenericResponse.swift in Sources */,
+				33DCB41E256970EF00DDF92B /* MashmallowCreateVC.swift in Sources */,
+				33DCB43225697AB000DDF92B /* CompleteBtnTouchTVCell.swift in Sources */,
+				33DCB4292569750900DDF92B /* SetToDoListTVCell.swift in Sources */,
+
 				ECDA3C51256969AB000554A5 /* TimeGoVC.swift in Sources */,
 				33DCB4062569658F00DDF92B /* File.swift in Sources */,
 				33DCB411256965B100DDF92B /* Cells.swift in Sources */,
 				33DCB4022569658500DDF92B /* GenericResponse.swift in Sources */,
 				ECDA3C5F2569742F000554A5 /* TimeGoUnderCVC.swift in Sources */,
+
 				33DCB417256965DE00DDF92B /* APIConstants.swift in Sources */,
+				33DCB422256974A000DDF92B /* SetGoalAndTimeTVCell.swift in Sources */,
 				33DCB3E02569634500DDF92B /* ViewController.swift in Sources */,
 				33DCB3DC2569634500DDF92B /* AppDelegate.swift in Sources */,
 				ECDA3C5525696EDD000554A5 /* CircularProgressView.swift in Sources */,

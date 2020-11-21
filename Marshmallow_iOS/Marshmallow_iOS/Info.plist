@@ -39,7 +39,11 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
+
+					
+
 					<string>TimeGo</string>
+
 				</dict>
 			</array>
 		</dict>
