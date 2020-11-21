@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,11 @@
 		33DCB3E32569634500DDF92B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33DCB3E12569634500DDF92B /* Main.storyboard */; };
 		33DCB3E52569634600DDF92B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33DCB3E42569634600DDF92B /* Assets.xcassets */; };
 		33DCB3E82569634600DDF92B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33DCB3E62569634600DDF92B /* LaunchScreen.storyboard */; };
+		33DCB4022569658500DDF92B /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB4012569658500DDF92B /* GenericResponse.swift */; };
+		33DCB4062569658F00DDF92B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB4052569658F00DDF92B /* File.swift */; };
+		33DCB411256965B100DDF92B /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB410256965B100DDF92B /* Cells.swift */; };
+		33DCB414256965BC00DDF92B /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB413256965BC00DDF92B /* Fonts.swift */; };
+		33DCB417256965DE00DDF92B /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB416256965DE00DDF92B /* APIConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		33DCB3E42569634600DDF92B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33DCB3E72569634600DDF92B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33DCB3E92569634600DDF92B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33DCB4012569658500DDF92B /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
+		33DCB4052569658F00DDF92B /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		33DCB410256965B100DDF92B /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
+		33DCB413256965BC00DDF92B /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		33DCB416256965DE00DDF92B /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		C388999A73FCABC558C64810 /* Pods-Marshmallow_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marshmallow_iOS.release.xcconfig"; path = "Target Support Files/Pods-Marshmallow_iOS/Pods-Marshmallow_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		F599855D0854E638CB77B407 /* Pods-Marshmallow_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marshmallow_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Marshmallow_iOS/Pods-Marshmallow_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,15 +73,92 @@
 		33DCB3DA2569634500DDF92B /* Marshmallow_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				33DCB3DB2569634500DDF92B /* AppDelegate.swift */,
-				33DCB3DD2569634500DDF92B /* SceneDelegate.swift */,
-				33DCB3DF2569634500DDF92B /* ViewController.swift */,
-				33DCB3E12569634500DDF92B /* Main.storyboard */,
-				33DCB3E42569634600DDF92B /* Assets.xcassets */,
-				33DCB3E62569634600DDF92B /* LaunchScreen.storyboard */,
+				33DCB3F6256964E600DDF92B /* Resources */,
+				33DCB3F7256964EF00DDF92B /* Sources */,
 				33DCB3E92569634600DDF92B /* Info.plist */,
 			);
 			path = Marshmallow_iOS;
+			sourceTree = "<group>";
+		};
+		33DCB3F6256964E600DDF92B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				33DCB3E42569634600DDF92B /* Assets.xcassets */,
+				33DCB3DB2569634500DDF92B /* AppDelegate.swift */,
+				33DCB3DD2569634500DDF92B /* SceneDelegate.swift */,
+				33DCB3FC2569653F00DDF92B /* APIServices */,
+				33DCB3FA256964FF00DDF92B /* Storyboards */,
+				33DCB3FD2569654E00DDF92B /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		33DCB3F7256964EF00DDF92B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				33DCB3F8256964F900DDF92B /* VCs */,
+				33DCB3FE2569655300DDF92B /* Cells */,
+				33DCB4002569655F00DDF92B /* Model */,
+				33DCB3FF2569655900DDF92B /* Extension */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		33DCB3F8256964F900DDF92B /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				33DCB3DF2569634500DDF92B /* ViewController.swift */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
+		33DCB3FA256964FF00DDF92B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				33DCB3E62569634600DDF92B /* LaunchScreen.storyboard */,
+				33DCB3E12569634500DDF92B /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		33DCB3FC2569653F00DDF92B /* APIServices */ = {
+			isa = PBXGroup;
+			children = (
+				33DCB416256965DE00DDF92B /* APIConstants.swift */,
+			);
+			path = APIServices;
+			sourceTree = "<group>";
+		};
+		33DCB3FD2569654E00DDF92B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				33DCB413256965BC00DDF92B /* Fonts.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		33DCB3FE2569655300DDF92B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				33DCB410256965B100DDF92B /* Cells.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		33DCB3FF2569655900DDF92B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				33DCB4052569658F00DDF92B /* File.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		33DCB4002569655F00DDF92B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				33DCB4012569658500DDF92B /* GenericResponse.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		69A0F060C4829F9B711955B6 /* Frameworks */ = {
@@ -88,7 +175,6 @@
 				F599855D0854E638CB77B407 /* Pods-Marshmallow_iOS.debug.xcconfig */,
 				C388999A73FCABC558C64810 /* Pods-Marshmallow_iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -206,6 +292,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33DCB414256965BC00DDF92B /* Fonts.swift in Sources */,
+				33DCB4062569658F00DDF92B /* File.swift in Sources */,
+				33DCB411256965B100DDF92B /* Cells.swift in Sources */,
+				33DCB4022569658500DDF92B /* GenericResponse.swift in Sources */,
+				33DCB417256965DE00DDF92B /* APIConstants.swift in Sources */,
 				33DCB3E02569634500DDF92B /* ViewController.swift in Sources */,
 				33DCB3DC2569634500DDF92B /* AppDelegate.swift in Sources */,
 				33DCB3DE2569634500DDF92B /* SceneDelegate.swift in Sources */,
