@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+
+struct APIConstants {
+    static let baseURL = "http://3.34.20.225:3000"
+    
+    
+}
