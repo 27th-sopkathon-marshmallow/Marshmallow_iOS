@@ -13,8 +13,7 @@ class TimeGoWholeCVC: UICollectionViewCell {
     @IBOutlet weak var userCV: UICollectionView!
     
     
-    var userNames = ["1","2","3","4","5","6","7","8",]
-    var profileImages = [""]
+    var profileImages = ["challengeImgProfile1","challengeImgProfile2","challengeImgProfile3","challengeImgProfile4","challengeImgProfile5","challengeImgProfile6","challengeImgProfile7"]
     
     override func awakeFromNib() {
         userCV.delegate = self
@@ -41,7 +40,7 @@ extension TimeGoWholeCVC : UICollectionViewDelegate {
 
 extension TimeGoWholeCVC : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return userNames.count
+        return TimeGoVC.participants.count
         
         
     }
@@ -54,7 +53,7 @@ extension TimeGoWholeCVC : UICollectionViewDataSource {
             
             return UICollectionViewCell()}
         
-        cell.setUser(profileURL: "", userName: userNames[indexPath.item])
+        cell.setUser(profileURL: profileImages[indexPath.item], userName: TimeGoVC.participants[indexPath.item])
         
         
         return cell
@@ -73,12 +72,12 @@ extension TimeGoWholeCVC : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 80 , height: 100)
+        return CGSize(width: 40 , height: 60)
         
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
+        return UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0)
     }
     
     //    UIEdgeInset
@@ -86,7 +85,7 @@ extension TimeGoWholeCVC : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 12
     }
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
@@ -97,7 +96,7 @@ extension TimeGoWholeCVC : UICollectionViewDelegateFlowLayout {
     
     
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-//        return CGSize(width: collectionView.frame.width, height: 50)
+//        return CGSize(width: collectionView.frame.width, height: 20)
 //
 //    }
     

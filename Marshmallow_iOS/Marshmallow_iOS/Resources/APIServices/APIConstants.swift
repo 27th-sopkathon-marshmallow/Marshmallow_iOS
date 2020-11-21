@@ -9,7 +9,11 @@ import Foundation
 
 
 struct APIConstants {
-    static let baseURL = "http://3.34.20.225:3000"
+    static let baseURL = "http://15.164.52.140:3000"
+    
+    static let roomInfoURL = baseURL + "/room/"
+    static let makeRoomURL = baseURL + "/room/create"
+    
     
     
 }

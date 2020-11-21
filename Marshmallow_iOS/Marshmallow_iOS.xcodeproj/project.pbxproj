@@ -25,7 +25,21 @@
 		33DCB426256974E400DDF92B /* SetNicknameTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB425256974E400DDF92B /* SetNicknameTVCell.swift */; };
 		33DCB4292569750900DDF92B /* SetToDoListTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB4282569750900DDF92B /* SetToDoListTVCell.swift */; };
 		33DCB43225697AB000DDF92B /* CompleteBtnTouchTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB43125697AB000DDF92B /* CompleteBtnTouchTVCell.swift */; };
+
 		33DCB43C2569C92600DDF92B /* CreateDatePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB43B2569C92600DDF92B /* CreateDatePickerVC.swift */; };
+
+		920BEB4525696E68005C24B4 /* home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 920BEB4425696E68005C24B4 /* home.storyboard */; };
+		920BEB4825698448005C24B4 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920BEB4725698447005C24B4 /* HomeVC.swift */; };
+		920BEB4B25698473005C24B4 /* HomePopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920BEB4A25698473005C24B4 /* HomePopVC.swift */; };
+		920BEB4E25699035005C24B4 /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 920BEB4D25699035005C24B4 /* Result.storyboard */; };
+		920BEB57256995D1005C24B4 /* ResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920BEB56256995D1005C24B4 /* ResultVC.swift */; };
+		920BEB5A25699F44005C24B4 /* ResultImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920BEB5925699F43005C24B4 /* ResultImageCell.swift */; };
+		920BEB5D25699FBD005C24B4 /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920BEB5C25699FBD005C24B4 /* LabelCell.swift */; };
+		920BEB602569A001005C24B4 /* PersonalResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920BEB5F2569A001005C24B4 /* PersonalResultCell.swift */; };
+		920BEB632569B4CF005C24B4 /* ResultPopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920BEB622569B4CE005C24B4 /* ResultPopVC.swift */; };
+		920BEB692569B8DF005C24B4 /* Participants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920BEB682569B8DF005C24B4 /* Participants.swift */; };
+		920BEB6C2569B94C005C24B4 /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920BEB6B2569B94C005C24B4 /* TodoList.swift */; };
+
 		ECDA3C4E25696990000554A5 /* TimeGo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECDA3C4D25696990000554A5 /* TimeGo.storyboard */; };
 		ECDA3C51256969AB000554A5 /* TimeGoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C50256969AB000554A5 /* TimeGoVC.swift */; };
 		ECDA3C5525696EDD000554A5 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C5425696EDD000554A5 /* CircularProgressView.swift */; };
@@ -33,6 +47,22 @@
 		ECDA3C5C256973E5000554A5 /* TimeGoUsersCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C5B256973E5000554A5 /* TimeGoUsersCVC.swift */; };
 		ECDA3C5F2569742F000554A5 /* TimeGoUnderCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C5E2569742F000554A5 /* TimeGoUnderCVC.swift */; };
 		ECDA3C6225697532000554A5 /* TimeGoTodoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C6125697532000554A5 /* TimeGoTodoCVC.swift */; };
+
+
+		ECDA3C6D25698947000554A5 /* UIColor_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C6C25698947000554A5 /* UIColor_Extension.swift */; };
+		ECDA3C7025698C7F000554A5 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C6F25698C7F000554A5 /* UIViewExtensions.swift */; };
+		ECDA3C7325699BDB000554A5 /* InviteModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C7225699BDB000554A5 /* InviteModalVC.swift */; };
+		ECDA3C762569A829000554A5 /* GetRoomInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C752569A829000554A5 /* GetRoomInfoService.swift */; };
+		ECDA3C792569A9FC000554A5 /* NetworkResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C782569A9FC000554A5 /* NetworkResults.swift */; };
+		ECDA3C7C2569AAE9000554A5 /* GetRoomInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C7B2569AAE9000554A5 /* GetRoomInfoData.swift */; };
+		ECDA3C7F2569B42E000554A5 /* GetResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C7E2569B42E000554A5 /* GetResultData.swift */; };
+		ECDA3C842569BBCB000554A5 /* GetResultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C832569BBCB000554A5 /* GetResultService.swift */; };
+		ECDA3C872569BDE0000554A5 /* MakeRoomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C862569BDE0000554A5 /* MakeRoomData.swift */; };
+		ECDA3C8A2569BDFF000554A5 /* MakeRoomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C892569BDFF000554A5 /* MakeRoomService.swift */; };
+		ECDA3C8D2569C000000554A5 /* JoinRoomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C8C2569C000000554A5 /* JoinRoomData.swift */; };
+		ECDA3C902569C016000554A5 /* JoinRoomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C8F2569C016000554A5 /* JoinRoomService.swift */; };
+		ECDA3C9B2569C617000554A5 /* TodoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C9A2569C617000554A5 /* TodoCell.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,7 +86,22 @@
 		33DCB425256974E400DDF92B /* SetNicknameTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNicknameTVCell.swift; sourceTree = "<group>"; };
 		33DCB4282569750900DDF92B /* SetToDoListTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetToDoListTVCell.swift; sourceTree = "<group>"; };
 		33DCB43125697AB000DDF92B /* CompleteBtnTouchTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteBtnTouchTVCell.swift; sourceTree = "<group>"; };
+
 		33DCB43B2569C92600DDF92B /* CreateDatePickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateDatePickerVC.swift; sourceTree = "<group>"; };
+
+		920BEB4425696E68005C24B4 /* home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = home.storyboard; sourceTree = "<group>"; };
+		920BEB4725698447005C24B4 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		920BEB4A25698473005C24B4 /* HomePopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePopVC.swift; sourceTree = "<group>"; };
+		920BEB4D25699035005C24B4 /* Result.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
+		920BEB56256995D1005C24B4 /* ResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultVC.swift; sourceTree = "<group>"; };
+		920BEB5925699F43005C24B4 /* ResultImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultImageCell.swift; sourceTree = "<group>"; };
+		920BEB5C25699FBD005C24B4 /* LabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
+		920BEB5F2569A001005C24B4 /* PersonalResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalResultCell.swift; sourceTree = "<group>"; };
+		920BEB622569B4CE005C24B4 /* ResultPopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPopVC.swift; sourceTree = "<group>"; };
+		920BEB652569B51A005C24B4 /* TodoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCell.swift; sourceTree = "<group>"; };
+		920BEB682569B8DF005C24B4 /* Participants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Participants.swift; sourceTree = "<group>"; };
+		920BEB6B2569B94C005C24B4 /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
+
 		C388999A73FCABC558C64810 /* Pods-Marshmallow_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marshmallow_iOS.release.xcconfig"; path = "Target Support Files/Pods-Marshmallow_iOS/Pods-Marshmallow_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		ECDA3C4D25696990000554A5 /* TimeGo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeGo.storyboard; sourceTree = "<group>"; };
 		ECDA3C50256969AB000554A5 /* TimeGoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeGoVC.swift; sourceTree = "<group>"; };
@@ -65,6 +110,20 @@
 		ECDA3C5B256973E5000554A5 /* TimeGoUsersCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeGoUsersCVC.swift; sourceTree = "<group>"; };
 		ECDA3C5E2569742F000554A5 /* TimeGoUnderCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeGoUnderCVC.swift; sourceTree = "<group>"; };
 		ECDA3C6125697532000554A5 /* TimeGoTodoCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeGoTodoCVC.swift; sourceTree = "<group>"; };
+		ECDA3C6C25698947000554A5 /* UIColor_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor_Extension.swift; sourceTree = "<group>"; };
+		ECDA3C6F25698C7F000554A5 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		ECDA3C7225699BDB000554A5 /* InviteModalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteModalVC.swift; sourceTree = "<group>"; };
+		ECDA3C752569A829000554A5 /* GetRoomInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRoomInfoService.swift; sourceTree = "<group>"; };
+		ECDA3C782569A9FC000554A5 /* NetworkResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResults.swift; sourceTree = "<group>"; };
+		ECDA3C7B2569AAE9000554A5 /* GetRoomInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRoomInfoData.swift; sourceTree = "<group>"; };
+		ECDA3C7E2569B42E000554A5 /* GetResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetResultData.swift; sourceTree = "<group>"; };
+		ECDA3C832569BBCB000554A5 /* GetResultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetResultService.swift; sourceTree = "<group>"; };
+		ECDA3C862569BDE0000554A5 /* MakeRoomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeRoomData.swift; sourceTree = "<group>"; };
+		ECDA3C892569BDFF000554A5 /* MakeRoomService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeRoomService.swift; sourceTree = "<group>"; };
+		ECDA3C8C2569C000000554A5 /* JoinRoomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRoomData.swift; sourceTree = "<group>"; };
+		ECDA3C8F2569C016000554A5 /* JoinRoomService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRoomService.swift; sourceTree = "<group>"; };
+		ECDA3C9A2569C617000554A5 /* TodoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCell.swift; sourceTree = "<group>"; };
+		ECDA3C9D2569C66B000554A5 /* TodoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TodoCell.swift; path = Marshmallow_iOS/Sources/Cells/TodoCell.swift; sourceTree = "<group>"; };
 		F599855D0854E638CB77B407 /* Pods-Marshmallow_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marshmallow_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Marshmallow_iOS/Pods-Marshmallow_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,10 +142,12 @@
 		33DCB3CF2569634500DDF92B = {
 			isa = PBXGroup;
 			children = (
+				ECDA3C9D2569C66B000554A5 /* TodoCell.swift */,
 				33DCB3DA2569634500DDF92B /* Marshmallow_iOS */,
 				33DCB3D92569634500DDF92B /* Products */,
 				6B45A6AC28DC5DB08E2DD300 /* Pods */,
 				69A0F060C4829F9B711955B6 /* Frameworks */,
+				ECDA3C942569C4A0000554A5 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,8 +199,18 @@
 			children = (
 				33DCB43B2569C92600DDF92B /* CreateDatePickerVC.swift */,
 				33DCB3DF2569634500DDF92B /* ViewController.swift */,
+
 				33DCB41D256970EF00DDF92B /* MashmallowCreateVC.swift */,
 				ECDA3C50256969AB000554A5 /* TimeGoVC.swift */,
+
+				920BEB4725698447005C24B4 /* HomeVC.swift */,
+				920BEB4A25698473005C24B4 /* HomePopVC.swift */,
+				920BEB56256995D1005C24B4 /* ResultVC.swift */,
+				920BEB622569B4CE005C24B4 /* ResultPopVC.swift */,
+				33DCB41D256970EF00DDF92B /* MashmallowCreateVC.swift */,
+				ECDA3C50256969AB000554A5 /* TimeGoVC.swift */,
+				ECDA3C7225699BDB000554A5 /* InviteModalVC.swift */,
+
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -149,6 +220,9 @@
 			children = (
 				33DCB3E62569634600DDF92B /* LaunchScreen.storyboard */,
 				33DCB3E12569634500DDF92B /* Main.storyboard */,
+
+				920BEB4425696E68005C24B4 /* home.storyboard */,
+				920BEB4D25699035005C24B4 /* Result.storyboard */,
 				33DCB41A256970AC00DDF92B /* MashmallowCreate.storyboard */,
 				ECDA3C4D25696990000554A5 /* TimeGo.storyboard */,
 			);
@@ -159,6 +233,11 @@
 			isa = PBXGroup;
 			children = (
 				33DCB416256965DE00DDF92B /* APIConstants.swift */,
+				ECDA3C752569A829000554A5 /* GetRoomInfoService.swift */,
+				ECDA3C782569A9FC000554A5 /* NetworkResults.swift */,
+				ECDA3C832569BBCB000554A5 /* GetResultService.swift */,
+				ECDA3C892569BDFF000554A5 /* MakeRoomService.swift */,
+				ECDA3C8F2569C016000554A5 /* JoinRoomService.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -176,10 +255,14 @@
 			children = (
 				33DCB4202569744E00DDF92B /* MashmallowCreate */,
 				33DCB410256965B100DDF92B /* Cells.swift */,
+				920BEB5925699F43005C24B4 /* ResultImageCell.swift */,
+				920BEB5C25699FBD005C24B4 /* LabelCell.swift */,
+				920BEB5F2569A001005C24B4 /* PersonalResultCell.swift */,
 				ECDA3C582569735C000554A5 /* TimeGoWholeCVC.swift */,
 				ECDA3C5B256973E5000554A5 /* TimeGoUsersCVC.swift */,
 				ECDA3C5E2569742F000554A5 /* TimeGoUnderCVC.swift */,
 				ECDA3C6125697532000554A5 /* TimeGoTodoCVC.swift */,
+				ECDA3C9A2569C617000554A5 /* TodoCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -188,6 +271,8 @@
 			isa = PBXGroup;
 			children = (
 				33DCB4052569658F00DDF92B /* File.swift */,
+				ECDA3C6C25698947000554A5 /* UIColor_Extension.swift */,
+				ECDA3C6F25698C7F000554A5 /* UIViewExtensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -196,6 +281,12 @@
 			isa = PBXGroup;
 			children = (
 				33DCB4012569658500DDF92B /* GenericResponse.swift */,
+				920BEB682569B8DF005C24B4 /* Participants.swift */,
+				920BEB6B2569B94C005C24B4 /* TodoList.swift */,
+				ECDA3C7B2569AAE9000554A5 /* GetRoomInfoData.swift */,
+				ECDA3C7E2569B42E000554A5 /* GetResultData.swift */,
+				ECDA3C862569BDE0000554A5 /* MakeRoomData.swift */,
+				ECDA3C8C2569C000000554A5 /* JoinRoomData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -234,6 +325,14 @@
 				ECDA3C5425696EDD000554A5 /* CircularProgressView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		ECDA3C942569C4A0000554A5 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				920BEB652569B51A005C24B4 /* TodoCell.swift */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,10 +394,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				920BEB4E25699035005C24B4 /* Result.storyboard in Resources */,
 				33DCB3E82569634600DDF92B /* LaunchScreen.storyboard in Resources */,
 				ECDA3C4E25696990000554A5 /* TimeGo.storyboard in Resources */,
 				33DCB3E52569634600DDF92B /* Assets.xcassets in Resources */,
 				33DCB3E32569634500DDF92B /* Main.storyboard in Resources */,
+				920BEB4525696E68005C24B4 /* home.storyboard in Resources */,
 				33DCB41B256970AC00DDF92B /* MashmallowCreate.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,29 +453,55 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECDA3C9B2569C617000554A5 /* TodoCell.swift in Sources */,
 				33DCB414256965BC00DDF92B /* Fonts.swift in Sources */,
 				33DCB426256974E400DDF92B /* SetNicknameTVCell.swift in Sources */,
 				33DCB4062569658F00DDF92B /* File.swift in Sources */,
+				ECDA3C842569BBCB000554A5 /* GetResultService.swift in Sources */,
 				33DCB411256965B100DDF92B /* Cells.swift in Sources */,
 				33DCB4022569658500DDF92B /* GenericResponse.swift in Sources */,
 				33DCB41E256970EF00DDF92B /* MashmallowCreateVC.swift in Sources */,
 				33DCB43225697AB000DDF92B /* CompleteBtnTouchTVCell.swift in Sources */,
 				33DCB4292569750900DDF92B /* SetToDoListTVCell.swift in Sources */,
 				ECDA3C51256969AB000554A5 /* TimeGoVC.swift in Sources */,
+				ECDA3C7F2569B42E000554A5 /* GetResultData.swift in Sources */,
 				33DCB4062569658F00DDF92B /* File.swift in Sources */,
+				ECDA3C902569C016000554A5 /* JoinRoomService.swift in Sources */,
 				33DCB411256965B100DDF92B /* Cells.swift in Sources */,
+				920BEB4B25698473005C24B4 /* HomePopVC.swift in Sources */,
+				920BEB5D25699FBD005C24B4 /* LabelCell.swift in Sources */,
+				920BEB692569B8DF005C24B4 /* Participants.swift in Sources */,
+				920BEB4825698448005C24B4 /* HomeVC.swift in Sources */,
 				33DCB4022569658500DDF92B /* GenericResponse.swift in Sources */,
 				ECDA3C5F2569742F000554A5 /* TimeGoUnderCVC.swift in Sources */,
 				33DCB417256965DE00DDF92B /* APIConstants.swift in Sources */,
+				920BEB6C2569B94C005C24B4 /* TodoList.swift in Sources */,
+				920BEB57256995D1005C24B4 /* ResultVC.swift in Sources */,
+				920BEB602569A001005C24B4 /* PersonalResultCell.swift in Sources */,
+				920BEB632569B4CF005C24B4 /* ResultPopVC.swift in Sources */,
+				920BEB5A25699F44005C24B4 /* ResultImageCell.swift in Sources */,
+				33DCB3DE2569634500DDF92B /* SceneDelegate.swift in Sources */,
+				ECDA3C762569A829000554A5 /* GetRoomInfoService.swift in Sources */,
 				33DCB422256974A000DDF92B /* SetGoalAndTimeTVCell.swift in Sources */,
 				33DCB3E02569634500DDF92B /* ViewController.swift in Sources */,
+				ECDA3C8D2569C000000554A5 /* JoinRoomData.swift in Sources */,
 				33DCB3DC2569634500DDF92B /* AppDelegate.swift in Sources */,
+				ECDA3C7325699BDB000554A5 /* InviteModalVC.swift in Sources */,
 				ECDA3C5525696EDD000554A5 /* CircularProgressView.swift in Sources */,
+				ECDA3C7025698C7F000554A5 /* UIViewExtensions.swift in Sources */,
 				33DCB3DE2569634500DDF92B /* SceneDelegate.swift in Sources */,
 				ECDA3C5C256973E5000554A5 /* TimeGoUsersCVC.swift in Sources */,
+				ECDA3C872569BDE0000554A5 /* MakeRoomData.swift in Sources */,
+				ECDA3C7C2569AAE9000554A5 /* GetRoomInfoData.swift in Sources */,
 				ECDA3C592569735C000554A5 /* TimeGoWholeCVC.swift in Sources */,
+				ECDA3C8A2569BDFF000554A5 /* MakeRoomService.swift in Sources */,
 				ECDA3C6225697532000554A5 /* TimeGoTodoCVC.swift in Sources */,
+
 				33DCB43C2569C92600DDF92B /* CreateDatePickerVC.swift in Sources */,
+
+				ECDA3C792569A9FC000554A5 /* NetworkResults.swift in Sources */,
+				ECDA3C6D25698947000554A5 /* UIColor_Extension.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

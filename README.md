@@ -26,9 +26,12 @@
 
 * <b> SOPT 27th SOPTKATHON
 * 프로젝트 기간: 2020.11.21 ~ 2020.11.22
-* 마시멜로는 ~~~한  어플리케이션입니다.
+* 마시멜로는 내가 좋아하는 중독적인 일을 원동력으로 활용할 수 있는 서비스입니다.
 
-//이미지 넣기
+
+<img style="border: 1px solid black !important; border-radius:20px; " src="https://user-images.githubusercontent.com/63224278/99884819-3e6b9b00-2c74-11eb-81d1-e6ccde999214.png" width="256px" height = "256px" />
+
+
 
 #### AutoLayout
 - iPhone 11 pro
@@ -48,6 +51,7 @@
 | Alamofire   | 서버 통신 | 5.2.1 |
 | Kingfisher  | 이미지 처리 | 5.14.0 |
 | SnapKit  | 오토레이아웃 | 5.0.1 |
+| Then  | 코드로 뷰 만들기 | 2.7.0 |
 
 
 <br>
@@ -81,15 +85,15 @@
 | Category | Priority | Function | Implemention | Part |
 |:--------|:--------|:--------:|:---------|:--------:|
 | 메인뷰 | 1 | 홈뷰 | ⭕️ | [서현](https://github.com/seohyun-106) |
-| 마시멜로 생성 | 2 | 마시멜로 생성뷰 | ⭕️ | [지은](https://github.com/hwangJi) |
-| 마시멜로 생성 | 3 | 버튼 누르면 텍스트필드셀 증가 기능 구현 | ⭕️ | [지은](https://github.com/hwangJi) |
+| 마시멜로 생성 | 2 | 마시멜로 생성뷰 | ⭕️ | [지은](https://github.com/hwangJi-dev) |
+| 마시멜로 생성 | 3 | 버튼 누르면 텍스트필드셀 증가 기능 구현 | ⭕️ | [지은](https://github.com/hwangJi-dev) |
 | 타이머구현 | 4 | 타이머뷰 | ⭕️ | [윤재](https://github.com/qodhrkawk) |
 | 타이머구현 | 5 | 타이머 기능 구현 | ⭕️ | [윤재](https://github.com/qodhrkawk) |
 | 타이머구현 | 6 | 타이머 시각적 구현 | ⭕️ | [윤재](https://github.com/qodhrkawk) |
 | 최종 결과 | 7 | 최종 결과뷰 | ⭕️ | [서현](https://github.com/seohyun-106) |
-| 최종 결과 | 8 | 최종 결과뷰 기기에 이미지 저장 기능 구현 | ⭕️ | [지은](https://github.com/hwangJi) |
+| 최종 결과 | 8 | 최종 결과뷰 기기에 이미지 저장 기능 구현 | ⭕️ | [지은](https://github.com/hwangJi-dev) |
 | 스플래시 | 9 | 스플래시뷰 | ⭕️ | [서현](https://github.com/seohyun-106) |
-| 팝업 | 10 | 팝업 연결 구현 | ⭕️ | [지은](https://github.com/hwangJi) |
+| 팝업 | 10 | 팝업 연결 구현 | ⭕️ | [지은](https://github.com/hwangJi-dev) |
 
  
  <br>
