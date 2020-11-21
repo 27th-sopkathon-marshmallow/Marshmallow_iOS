@@ -34,6 +34,9 @@
 		ECDA3C5C256973E5000554A5 /* TimeGoUsersCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C5B256973E5000554A5 /* TimeGoUsersCVC.swift */; };
 		ECDA3C5F2569742F000554A5 /* TimeGoUnderCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C5E2569742F000554A5 /* TimeGoUnderCVC.swift */; };
 		ECDA3C6225697532000554A5 /* TimeGoTodoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C6125697532000554A5 /* TimeGoTodoCVC.swift */; };
+		ECDA3C6D25698947000554A5 /* UIColor_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C6C25698947000554A5 /* UIColor_Extension.swift */; };
+		ECDA3C7025698C7F000554A5 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C6F25698C7F000554A5 /* UIViewExtensions.swift */; };
+		ECDA3C7325699BDB000554A5 /* InviteModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C7225699BDB000554A5 /* InviteModalVC.swift */; };
 
 /* End PBXBuildFile section */
 
@@ -66,6 +69,9 @@
 		ECDA3C5B256973E5000554A5 /* TimeGoUsersCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeGoUsersCVC.swift; sourceTree = "<group>"; };
 		ECDA3C5E2569742F000554A5 /* TimeGoUnderCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeGoUnderCVC.swift; sourceTree = "<group>"; };
 		ECDA3C6125697532000554A5 /* TimeGoTodoCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeGoTodoCVC.swift; sourceTree = "<group>"; };
+		ECDA3C6C25698947000554A5 /* UIColor_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor_Extension.swift; sourceTree = "<group>"; };
+		ECDA3C6F25698C7F000554A5 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		ECDA3C7225699BDB000554A5 /* InviteModalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteModalVC.swift; sourceTree = "<group>"; };
 		F599855D0854E638CB77B407 /* Pods-Marshmallow_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marshmallow_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Marshmallow_iOS/Pods-Marshmallow_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +148,7 @@
 				33DCB41D256970EF00DDF92B /* MashmallowCreateVC.swift */,
 
 				ECDA3C50256969AB000554A5 /* TimeGoVC.swift */,
+				ECDA3C7225699BDB000554A5 /* InviteModalVC.swift */,
 
 			);
 			path = VCs;
@@ -194,6 +201,8 @@
 			isa = PBXGroup;
 			children = (
 				33DCB4052569658F00DDF92B /* File.swift */,
+				ECDA3C6C25698947000554A5 /* UIColor_Extension.swift */,
+				ECDA3C6F25698C7F000554A5 /* UIViewExtensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -378,11 +387,14 @@
 				33DCB422256974A000DDF92B /* SetGoalAndTimeTVCell.swift in Sources */,
 				33DCB3E02569634500DDF92B /* ViewController.swift in Sources */,
 				33DCB3DC2569634500DDF92B /* AppDelegate.swift in Sources */,
+				ECDA3C7325699BDB000554A5 /* InviteModalVC.swift in Sources */,
 				ECDA3C5525696EDD000554A5 /* CircularProgressView.swift in Sources */,
+				ECDA3C7025698C7F000554A5 /* UIViewExtensions.swift in Sources */,
 				33DCB3DE2569634500DDF92B /* SceneDelegate.swift in Sources */,
 				ECDA3C5C256973E5000554A5 /* TimeGoUsersCVC.swift in Sources */,
 				ECDA3C592569735C000554A5 /* TimeGoWholeCVC.swift in Sources */,
 				ECDA3C6225697532000554A5 /* TimeGoTodoCVC.swift in Sources */,
+				ECDA3C6D25698947000554A5 /* UIColor_Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

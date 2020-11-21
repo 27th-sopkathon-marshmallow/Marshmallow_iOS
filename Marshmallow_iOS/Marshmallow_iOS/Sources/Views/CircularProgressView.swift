@@ -27,14 +27,14 @@ class CircularProgressView: UIView {
         circleLayer.path = circularPath.cgPath
         circleLayer.fillColor = UIColor.clear.cgColor
         circleLayer.lineCap = .butt
-        circleLayer.lineWidth = 20.0
-        circleLayer.strokeColor = UIColor.systemPink.cgColor
+        circleLayer.lineWidth = 16
+        circleLayer.strokeColor = UIColor.mypink.cgColor
         progressLayer.path = circularPath.cgPath
         progressLayer.fillColor = UIColor.clear.cgColor
         progressLayer.lineCap = .butt
-        progressLayer.lineWidth = 20.0
+        progressLayer.lineWidth = 16
         progressLayer.strokeEnd = 0
-        progressLayer.strokeColor = UIColor.lightGray.cgColor
+        progressLayer.strokeColor = UIColor.palegrey.cgColor
         layer.addSublayer(circleLayer)
         layer.addSublayer(progressLayer)
     }

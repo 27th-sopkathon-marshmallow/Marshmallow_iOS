@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Then
 
 
 class TimeGoVC: UIViewController {
@@ -19,6 +20,7 @@ class TimeGoVC: UIViewController {
     
     @IBOutlet weak var circleContainView: UIView!
     
+    @IBOutlet weak var titleContainView: UIView!
     @IBOutlet weak var wholeCV: UICollectionView!
     
     
@@ -27,15 +29,104 @@ class TimeGoVC: UIViewController {
     
     var timer = Timer()
     static var endTimeString = "2020-11-22 05:00:00"
-    static var startTimeString = "yyyy-MM-dd HH:mm:ss"
+    static var startTimeString = "2020-11-22 03:53:40"
     
     static var endTime : Date?
     static var startTime : Date?
     
     var circularView = CircularProgressView()
     
+    var popUpView = UIView().then{
+        $0.makeRounded(cornerRadius: 16)
+        $0.backgroundColor = .white
+        
+        
+        
+    }
+    var blurView = UIView().then{
+        $0.backgroundColor = .black
+        $0.alpha = 0.8
+    }
+    
+    var candyView = UIImageView().then{
+        $0.image = UIImage(named: "resultIcCandy")
+        
+    }
+    var timeOutLabel = UILabel().then{
+        $0.numberOfLines = 0
+        $0.text = "시간이 종료되었어요!\n누가 마시멜로를 꾹 참았을까요?"
+        $0.font = UIFont(name: "", size: 16.0)
+        
+        $0.textAlignment = .center
+        
+        
+    }
     
     
+    var okayButton = UIButton().then{
+        $0.backgroundColor = .mypink
+        $0.setTitle("확인", for: .normal)
+        $0.addTarget(self, action: #selector(touchupOkayButton), for: .touchUpInside)
+        
+        
+    }
+    
+    
+    var inviteView = UIView().then{
+        $0.backgroundColor = .white
+        $0.makeRounded(cornerRadius: 15)
+    }
+    
+    var inviteTitleLabel = UILabel().then{
+        $0.numberOfLines = 0
+        $0.text = "친구들과 같이 마시멜로!"
+        $0.font = UIFont(name: $0.font.fontName, size: 22)
+        $0.textAlignment = .center
+        
+    }
+    
+    var inviteDetailLabel = UILabel().then{
+        $0.numberOfLines = 0
+        $0.text = "초대코드를 복사하여\n친구들과 같이 마시멜로하세요 :D"
+        $0.textColor = .darkgrey
+        $0.font = UIFont(name: $0.font.fontName, size: 14)
+        $0.textAlignment = .center
+        
+        
+        
+    }
+    
+    var codeCopyButotn = UIButton().then{
+        
+        $0.backgroundColor = .lightpink
+        $0.setTitle("초대 코드 복사", for: .normal)
+        $0.setTitleColor(.mypink, for: .normal)
+        $0.addTarget(self, action: #selector(touchupCopyButton), for: .touchUpInside)
+        $0.titleLabel?.font = UIFont(name: "", size: 16)
+        $0.makeRounded(cornerRadius: 24)
+    }
+    
+    
+    var cancelButton = UIButton().then{
+       
+        $0.setTitle("취소", for: .normal)
+        $0.setTitleColor(.lightgrey, for: .normal)
+        $0.addTarget(self, action: #selector(touchupCancelButton), for: .touchUpInside)
+        
+        
+    }
+    
+    var completeButton  = UIButton().then{
+        
+        $0.setTitle("복사 완료!", for: .normal)
+        $0.backgroundColor = .black
+        $0.setTitleColor(.white, for: .normal)
+        $0.addTarget(self, action: #selector(touchupCancelButton), for: .touchUpInside)
+        $0.makeRounded(cornerRadius: 14)
+        $0.titleLabel?.font = UIFont(name: $0.titleLabel?.font.fontName ?? "", size: 14)
+        
+        
+    }
     
     
     //MARK:- LifeCycle Methods
@@ -66,14 +157,23 @@ class TimeGoVC: UIViewController {
         let date = Date()
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let calendar = Calendar.current
+        
+        
         
         TimeGoVC.endTime = formatter.date(from: TimeGoVC.endTimeString)
-        TimeGoVC.startTime = date
+        TimeGoVC.startTime = formatter.date(from: TimeGoVC.startTimeString)
         TimeGoVC.startTimeString = formatter.string(from: date)
         
+        
+        
+        let diff = calendar.dateComponents([.second], from: TimeGoVC.startTime!, to: TimeGoVC.endTime!)
+        
+        let totalSec = diff.second!
+        
+        
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timeLimit), userInfo: nil, repeats: true)
-       
-        circularView.progressAnimation(duration: 20)
+        circularView.progressAnimation(duration: Double(totalSec))
         circleContainView.addSubview(circularView)
         circularView.snp.makeConstraints{
             $0.centerX.equalToSuperview()
@@ -81,7 +181,9 @@ class TimeGoVC: UIViewController {
             
             
         }
-        
+        timeLabel.textColor = .mypink
+        titleContainView.backgroundColor = .palegrey
+        titleContainView.makeRounded(cornerRadius: 16)
         
     }
     
@@ -98,6 +200,13 @@ class TimeGoVC: UIViewController {
         
         let totalSec = diff.second!
         
+        if totalSec < 1 {
+            showTimeOut()
+            timer.invalidate()
+            
+            
+        }
+        
         let hour = totalSec/3600
         let min = (totalSec/60)%60
         let sec = totalSec%60
@@ -111,8 +220,146 @@ class TimeGoVC: UIViewController {
         
         
         
+        
+        
     }
     
+    @objc func touchupOkayButton(){
+        
+        
+        
+        
+    }
+    
+    @objc func touchupCopyButton(){
+        
+        
+        cancelButton.removeFromSuperview()
+        inviteView.addSubview(completeButton)
+        completeButton.snp.makeConstraints{
+            $0.top.equalToSuperview().offset(196)
+            $0.width.equalTo(111)
+            $0.height.equalTo(28)
+            $0.centerX.equalToSuperview()
+        }
+        
+        
+    }
+    
+    @objc func touchupCancelButton(){
+        blurView.removeFromSuperview()
+        inviteView.removeFromSuperview()
+        
+        
+    
+    }
+    @objc func touchupCompleteButton(){
+        blurView.removeFromSuperview()
+        inviteView.removeFromSuperview()
+        
+        
+    
+    }
+    
+    
+    
+    func showTimeOut(){
+        
+        self.view.addSubview(blurView)
+        self.view.addSubview(popUpView)
+        
+        blurView.snp.makeConstraints{
+            $0.top.bottom.leading.trailing.equalToSuperview()
+        }
+        popUpView.snp.makeConstraints{
+            $0.width.equalTo(274)
+            $0.height.equalTo(236)
+            $0.centerX.equalToSuperview()
+            $0.top.equalToSuperview().offset(257)
+            
+            
+        }
+        
+        popUpView.addSubview(candyView)
+        
+        candyView.snp.makeConstraints{
+            $0.width.height.equalTo(36)
+            $0.top.equalToSuperview().offset(40)
+            $0.centerX.equalToSuperview()
+        }
+        
+        popUpView.addSubview(timeOutLabel)
+        timeOutLabel.snp.makeConstraints{
+            $0.top.equalToSuperview().offset(100)
+            $0.centerX.equalToSuperview()
+            
+        }
+        
+        popUpView.addSubview(okayButton)
+        okayButton.snp.makeConstraints{
+            $0.width.equalToSuperview()
+            $0.height.equalTo(48)
+            $0.bottom.equalToSuperview()
+            
+    
+        }
+        
+        
+        
+        
+    }
+    
+    
+    
+    @IBAction func shareButtonAction(_ sender: Any) {
+        view.addSubview(blurView)
+        view.addSubview(inviteView)
+        inviteView.addSubview(inviteTitleLabel)
+        inviteView.addSubview(inviteDetailLabel)
+        inviteView.addSubview(codeCopyButotn)
+        inviteView.addSubview(cancelButton)
+        
+        
+        blurView.snp.makeConstraints{
+            $0.top.bottom.leading.trailing.equalToSuperview()
+            
+        }
+        
+        inviteView.snp.makeConstraints{
+            $0.width.equalToSuperview()
+            $0.height.equalTo(261)
+            $0.bottom.equalToSuperview().offset(5)
+            
+            
+        }
+        inviteTitleLabel.snp.makeConstraints{
+            $0.top.equalToSuperview().offset(42)
+            $0.centerX.equalToSuperview()
+        }
+        
+        inviteDetailLabel.snp.makeConstraints{
+            $0.top.equalToSuperview().offset(80)
+            $0.centerX.equalToSuperview()
+        }
+ 
+        codeCopyButotn.snp.makeConstraints{
+            $0.top.equalTo(136)
+            $0.width.equalTo(219)
+            $0.height.equalTo(48)
+            $0.centerX.equalToSuperview()
+            
+        }
+        
+        cancelButton.snp.makeConstraints{
+            $0.top.equalToSuperview().offset(196)
+            $0.centerX.equalToSuperview()
+            
+            
+        }
+        
+        
+        
+    }
     
     
     
@@ -213,7 +460,10 @@ extension TimeGoVC : UICollectionViewDelegateFlowLayout {
         return 0
         
     }
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 30)
+
+    }
     
 
     
