@@ -12,7 +12,7 @@ struct JoinRoomService {
     
     static let shared = JoinRoomService()
     
-    func joinRoom(code : String, completion : @escaping (NetworkResult<Any>) -> (Void)) {
+    func joinRoom(title : String, startTime:String,limitTime:String , completion : @escaping (NetworkResult<Any>) -> (Void)) {
         let url = APIConstants.makeRoomURL
         
         let header : HTTPHeaders = [
@@ -20,7 +20,9 @@ struct JoinRoomService {
         ]
         
         let body : Parameters = [
-            "code" : code
+            "title" : title,
+            "startTime" : startTime,
+            "limitTime" : limitTime
         ]
         
         let dataRequest = AF.request(url,

@@ -17,6 +17,9 @@ class MashmallowCreateVC: UIViewController {
     let now = NSDate()
     let dateFormatter = DateFormatter()
     var mycount :Int = 0
+    var goalText:String = "행복한 마시멜로 이야기"
+    var finalhourText:String = ""
+    var presentHour:String = ""
     
     
     
@@ -31,6 +34,10 @@ class MashmallowCreateVC: UIViewController {
         dateFormatter.pmSymbol = "오후"
         dateFormatter.dateFormat = "a hh시 mm분"
         hourText = dateFormatter.string(from: now as Date)
+        
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        presentHour = dateFormatter.string(from: now as Date)
+        
     }
     @IBAction func touchUpDatePickerBtn(_ sender: UIButton) {
         animatePopupBackground(true)
@@ -75,9 +82,13 @@ class MashmallowCreateVC: UIViewController {
         dateFormatter.amSymbol = "오전"
         dateFormatter.pmSymbol = "오후"
         
+    
         
         hourText = "\(ampm)" + " " + "\(hour)" + "시"  + " " + "\(minute)" + "분"
         
+        dateFormatter.dateFormat = "2020-11-22 11:30:15"
+        finalhourText = dateFormatter.dateFormat
+        print("파이널",finalhourText)
         
         createMashmallowTV.reloadSections(IndexSet(integer: 0), with: .none)
     }
@@ -107,7 +118,29 @@ class MashmallowCreateVC: UIViewController {
         print(realToDoArray)
         
         
-     //   JoinRoomService.shared.joinRoom
+        JoinRoomService.shared.joinRoom(title: goalText, startTime: presentHour, limitTime: finalhourText, completion: { [self] result in
+            switch result {
+            case .success:
+                print("성공")
+            case .requestErr(let msg):
+                print("dd",goalText)
+                print("dd",presentHour)
+                print("dd",finalhourText)
+                print(msg)
+            case .pathErr:
+                print("path")
+                break
+            case .serverErr:
+                print("server")
+                break
+            case .networkFail:
+                print("network")
+                break
+            }
+            
+        })
+        
+        
     }
     
     
@@ -148,6 +181,7 @@ extension MashmallowCreateVC:UITableViewDelegate,UITableViewDataSource{
             
             goalCell.limitTimeBtn.setTitle(hourText, for: .normal)
             
+            goalText = "행복한 마시멜로 이야기"
             return goalCell
             
         }
