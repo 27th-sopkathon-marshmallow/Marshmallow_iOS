@@ -39,7 +39,8 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
-					<string>Result</string>
+					<string>MashmallowCreate</string>
+
 				</dict>
 			</array>
 		</dict>
