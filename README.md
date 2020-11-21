@@ -33,6 +33,7 @@
 
 
 
+
 #### AutoLayout
 - iPhone 11 pro
 
@@ -102,49 +103,19 @@
  
  ## 🏞 간단한 화면 설명
 
- 1. Home View
 
- > 
- >
- > 
- >
- > 
+ <img style="border: 1px solid black !important; border-radius:20px; " src="https://user-images.githubusercontent.com/63224278/99889809-fe201300-2c9b-11eb-982e-eda81e889088.png" />
+ 
 
- //이미지 넣기
+<img style="border: 1px solid black !important; border-radius:20px; " src="https://user-images.githubusercontent.com/63224278/99889812-00826d00-2c9c-11eb-9259-46f73ddbdaf1.png" />
 
- 2. View
 
- > ~하는 기능
- >
- > ~ 설정 가능
+<img style="border: 1px solid black !important; border-radius:20px; " src="https://user-images.githubusercontent.com/63224278/99889814-024c3080-2c9c-11eb-9bc4-6158c1e25bf2.png" />
 
- //이미지 넣기
 
- 3. View
+<img style="border: 1px solid black !important; border-radius:20px; " src="https://user-images.githubusercontent.com/63224278/99889816-02e4c700-2c9c-11eb-882e-714be387d336.png" />
 
- > ~가능
- >
- > ~가능
- >
- > ~가능
- >
- > ~가능
- >
- > 
 
- //이미지 넣기
-
- 4. View
-
- > ~플랫폼
- >
- > ~가능
- >
- > ~가능
- >
- > 
-
- //이미지 넣기
 
  <br>
  
