@@ -166,6 +166,7 @@
 				33DCB3DD2569634500DDF92B /* SceneDelegate.swift */,
 				33DCB3FC2569653F00DDF92B /* APIServices */,
 				33DCB3FA256964FF00DDF92B /* Storyboards */,
+				ECDA3C5325696EB7000554A5 /* Views */,
 				33DCB3FD2569654E00DDF92B /* Fonts */,
 			);
 			path = Resources;
@@ -174,7 +175,6 @@
 		33DCB3F7256964EF00DDF92B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				ECDA3C5325696EB7000554A5 /* Views */,
 				33DCB3F8256964F900DDF92B /* VCs */,
 				33DCB3FE2569655300DDF92B /* Cells */,
 				33DCB4002569655F00DDF92B /* Model */,
