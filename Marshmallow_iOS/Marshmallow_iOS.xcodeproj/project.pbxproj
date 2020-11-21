@@ -19,6 +19,8 @@
 		33DCB411256965B100DDF92B /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB410256965B100DDF92B /* Cells.swift */; };
 		33DCB414256965BC00DDF92B /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB413256965BC00DDF92B /* Fonts.swift */; };
 		33DCB417256965DE00DDF92B /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB416256965DE00DDF92B /* APIConstants.swift */; };
+		ECDA3C4E25696990000554A5 /* TimeGo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECDA3C4D25696990000554A5 /* TimeGo.storyboard */; };
+		ECDA3C51256969AB000554A5 /* TimeGoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C50256969AB000554A5 /* TimeGoVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		33DCB413256965BC00DDF92B /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		33DCB416256965DE00DDF92B /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		C388999A73FCABC558C64810 /* Pods-Marshmallow_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marshmallow_iOS.release.xcconfig"; path = "Target Support Files/Pods-Marshmallow_iOS/Pods-Marshmallow_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		ECDA3C4D25696990000554A5 /* TimeGo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeGo.storyboard; sourceTree = "<group>"; };
+		ECDA3C50256969AB000554A5 /* TimeGoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeGoVC.swift; sourceTree = "<group>"; };
 		F599855D0854E638CB77B407 /* Pods-Marshmallow_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marshmallow_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Marshmallow_iOS/Pods-Marshmallow_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				33DCB3DF2569634500DDF92B /* ViewController.swift */,
+				ECDA3C50256969AB000554A5 /* TimeGoVC.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 			children = (
 				33DCB3E62569634600DDF92B /* LaunchScreen.storyboard */,
 				33DCB3E12569634500DDF92B /* Main.storyboard */,
+				ECDA3C4D25696990000554A5 /* TimeGo.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -238,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33DCB3E82569634600DDF92B /* LaunchScreen.storyboard in Resources */,
+				ECDA3C4E25696990000554A5 /* TimeGo.storyboard in Resources */,
 				33DCB3E52569634600DDF92B /* Assets.xcassets in Resources */,
 				33DCB3E32569634500DDF92B /* Main.storyboard in Resources */,
 			);
@@ -293,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33DCB414256965BC00DDF92B /* Fonts.swift in Sources */,
+				ECDA3C51256969AB000554A5 /* TimeGoVC.swift in Sources */,
 				33DCB4062569658F00DDF92B /* File.swift in Sources */,
 				33DCB411256965B100DDF92B /* Cells.swift in Sources */,
 				33DCB4022569658500DDF92B /* GenericResponse.swift in Sources */,
