@@ -76,7 +76,7 @@ extension TimeGoUnderCVC : UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: collectionView.frame.width , height: 50)
+        return CGSize(width: collectionView.frame.width , height: 40)
         
     }
     
