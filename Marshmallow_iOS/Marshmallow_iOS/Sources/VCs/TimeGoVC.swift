@@ -28,7 +28,7 @@ class TimeGoVC: UIViewController {
     
     
     var timer = Timer()
-    static var endTimeString = "2020-11-22 06:00:00"
+    static var endTimeString = "2020-11-22 07:00:00"
     static var startTimeString = "2020-11-22 03:53:40"
     
     static var endTime : Date?
@@ -159,7 +159,7 @@ class TimeGoVC: UIViewController {
     
     func setItems(){
         
-        GetRoomInfoService.shared.getRoomInfo { networkResult -> Void in
+        GetRoomInfoService.shared.getRoomInfo(id : 12) { networkResult -> Void in
             switch networkResult {
             case .success(let data) :
                 if let roomData = data as? GetRoomInfoData{
@@ -168,11 +168,38 @@ class TimeGoVC: UIViewController {
                     self.titleLabel.text = roomData.title
                     
                     for p in roomData.participant {
+                       
                         TimeGoVC.participants.append(p.nickname)
                         
                         
                     }
                     
+                    let date = Date()
+                    let formatter = DateFormatter()
+                    formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                    let calendar = Calendar.current
+                    
+                    TimeGoVC.endTime = formatter.date(from: TimeGoVC.endTimeString)
+                    TimeGoVC.startTime = formatter.date(from: TimeGoVC.startTimeString)
+                    TimeGoVC.startTimeString = formatter.string(from: date)
+                    
+                    let diff = calendar.dateComponents([.second], from: TimeGoVC.startTime!, to: TimeGoVC.endTime!)
+                    
+                    let totalSec = diff.second!
+                    
+                    
+                 
+                    
+                    self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.timeLimit), userInfo: nil, repeats: true)
+                    self.circularView.progressAnimation(duration: Double(totalSec))
+                    self.circleContainView.addSubview(self.circularView)
+                    self.circularView.snp.makeConstraints{
+                        $0.centerX.equalToSuperview()
+                        $0.centerY.equalToSuperview()
+                        
+                        
+                    }
+                    self.wholeCV.reloadData()
                     
                     
                 }
@@ -197,34 +224,10 @@ class TimeGoVC: UIViewController {
         }
         
         
-        titleLabel.text = "오후 7시 축구 경기"
-        let date = Date()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        let calendar = Calendar.current
+      
         
-        
-        
-        TimeGoVC.endTime = formatter.date(from: TimeGoVC.endTimeString)
-        TimeGoVC.startTime = formatter.date(from: TimeGoVC.startTimeString)
-        TimeGoVC.startTimeString = formatter.string(from: date)
-        
-        
-        
-        let diff = calendar.dateComponents([.second], from: TimeGoVC.startTime!, to: TimeGoVC.endTime!)
-        
-        let totalSec = diff.second!
-        
-        
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timeLimit), userInfo: nil, repeats: true)
-        circularView.progressAnimation(duration: Double(totalSec))
-        circleContainView.addSubview(circularView)
-        circularView.snp.makeConstraints{
-            $0.centerX.equalToSuperview()
-            $0.centerY.equalToSuperview()
-            
-            
-        }
+    
+       
         timeLabel.textColor = .mypink
         titleContainView.backgroundColor = .palegrey
         titleContainView.makeRounded(cornerRadius: 16)
@@ -269,6 +272,47 @@ class TimeGoVC: UIViewController {
     }
     
     @objc func touchupOkayButton(){
+        
+        GetResultService.shared.getRoomInfo(id: 12) { networkResult -> Void in
+            switch networkResult {
+            case .success(let data) :
+                var namesForNext : [String] = []
+                var percentForNext : [Int] = []
+                if let roomData = data as? GetResultData{
+                    
+                    for p in roomData.participant {
+                        namesForNext.append(p.nickname)
+                        percentForNext.append(p.percent)
+                    }
+                    
+                 
+                
+                    
+                    
+                }
+                
+                print(namesForNext)
+                print(percentForNext)
+                
+            case .requestErr(let msg):
+                if let message = msg as? String {
+                   print(message)
+                }
+            case .pathErr :
+                print("pathErr")
+            case .serverErr :
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            
+                
+                
+            
+            }
+            
+            
+        }
+        
         
         
         

@@ -1,34 +1,38 @@
 //
-//  GetRoomInfoService.swift
+//  JoinRoomService.swift
 //  Marshmallow_iOS
 //
 //  Created by Yunjae Kim on 2020/11/22.
 //
 
 import Foundation
-
 import Alamofire
 
-
-
-struct GetRoomInfoService {
-    static let shared = GetRoomInfoService()
-   
+struct JoinRoomService {
     
-    func getRoomInfo(id : Int, completion : @escaping (NetworkResult<Any>) -> Void) {
-        let header : HTTPHeaders = ["Content-Type" : "application/json"]
+    static let shared = JoinRoomService()
+    
+    func joinRoom(code : String, completion : @escaping (NetworkResult<Any>) -> (Void)) {
+        let url = APIConstants.makeRoomURL
         
-        let dataRequest = AF.request(APIConstants.roomInfoURL+String(id),
-                                     method: .get,
+        let header : HTTPHeaders = [
+            "Content-Type":"application/json"
+        ]
+        
+        let body : Parameters = [
+            "code" : code
+        ]
+        
+        let dataRequest = AF.request(url,
+                                     method: .post,
+                                     parameters: body,
                                      encoding: JSONEncoding.default,
                                      headers: header)
         
-        
-        dataRequest.responseData { response in
+        dataRequest.responseData{ response in
             switch response.result {
             case .success :
-                print("======================1=======================")
-                print(APIConstants.roomInfoURL+String(id))
+                
                 guard let statusCode = response.response?.statusCode else{
                     return
                 }
@@ -37,13 +41,13 @@ struct GetRoomInfoService {
                     
                 }
                 
-               
-                completion(judgeRoomInfo(statusCode: statusCode, data : data))
+                completion(judgeRoom(status: statusCode, data: data))
                 
-            case .failure :
-                print("======================2=======================")
+                
+                
+            case .failure(let err):
+                print(err)
                 completion(.networkFail)
-                
                 
             }
             
@@ -51,24 +55,21 @@ struct GetRoomInfoService {
         }
         
         
-        
     }
     
     
     
-    func judgeRoomInfo(statusCode : Int , data : Data) -> NetworkResult<Any> {
+    private func judgeRoom(status : Int, data : Data) -> NetworkResult<Any> {
         let decoder = JSONDecoder()
-        
-        guard let decodedData = try? decoder.decode(GenericResponse<GetRoomInfoData>.self, from : data) else{
-         
-           
+        guard let decodedData = try? decoder.decode(GenericResponse<JoinRoomData>.self, from : data) else{
+            
+            
             return .pathErr
             
         }
-        
-        switch statusCode{
+       
+        switch status{
         case 200:
-            print(data)
             return .success(decodedData.data)
         case 400..<500 :
             return .requestErr(decodedData.message)
@@ -89,5 +90,3 @@ struct GetRoomInfoService {
     
     
 }
-
-
