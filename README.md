@@ -85,15 +85,15 @@
 | Category | Priority | Function | Implemention | Part |
 |:--------|:--------|:--------:|:---------|:--------:|
 | 메인뷰 | 1 | 홈뷰 | ⭕️ | [서현](https://github.com/seohyun-106) |
-| 마시멜로 생성 | 2 | 마시멜로 생성뷰 | ⭕️ | [지은](https://github.com/hwangJi) |
-| 마시멜로 생성 | 3 | 버튼 누르면 텍스트필드셀 증가 기능 구현 | ⭕️ | [지은](https://github.com/hwangJi) |
+| 마시멜로 생성 | 2 | 마시멜로 생성뷰 | ⭕️ | [지은](https://github.com/hwangJi-dev) |
+| 마시멜로 생성 | 3 | 버튼 누르면 텍스트필드셀 증가 기능 구현 | ⭕️ | [지은](https://github.com/hwangJi-dev) |
 | 타이머구현 | 4 | 타이머뷰 | ⭕️ | [윤재](https://github.com/qodhrkawk) |
 | 타이머구현 | 5 | 타이머 기능 구현 | ⭕️ | [윤재](https://github.com/qodhrkawk) |
 | 타이머구현 | 6 | 타이머 시각적 구현 | ⭕️ | [윤재](https://github.com/qodhrkawk) |
 | 최종 결과 | 7 | 최종 결과뷰 | ⭕️ | [서현](https://github.com/seohyun-106) |
-| 최종 결과 | 8 | 최종 결과뷰 기기에 이미지 저장 기능 구현 | ⭕️ | [지은](https://github.com/hwangJi) |
+| 최종 결과 | 8 | 최종 결과뷰 기기에 이미지 저장 기능 구현 | ⭕️ | [지은](https://github.com/hwangJi-dev) |
 | 스플래시 | 9 | 스플래시뷰 | ⭕️ | [서현](https://github.com/seohyun-106) |
-| 팝업 | 10 | 팝업 연결 구현 | ⭕️ | [지은](https://github.com/hwangJi) |
+| 팝업 | 10 | 팝업 연결 구현 | ⭕️ | [지은](https://github.com/hwangJi-dev) |
 
  
  <br>
