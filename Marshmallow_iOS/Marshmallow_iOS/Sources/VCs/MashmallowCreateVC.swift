@@ -10,7 +10,18 @@ import UIKit
 class MashmallowCreateVC: UIViewController {
     
     @IBOutlet var createMashmallowTV: UITableView!
+    @IBOutlet var popupBackgroundView: UIView!
+    var hourText:String = "오전 4시 26분"
     var toDoListArray:[String] = [""]
+    var realToDoArray:[String] = []
+    let now = NSDate()
+    let dateFormatter = DateFormatter()
+    var mycount :Int = 0
+    var goalText:String = "행복한 마시멜로 이야기"
+    var finalhourText:String = ""
+    var presentHour:String = ""
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,8 +29,69 @@ class MashmallowCreateVC: UIViewController {
         createMashmallowTV.dataSource = self
         createMashmallowTV.allowsSelection = false
         createMashmallowTV.separatorStyle = .none
+        setPopupBackgroundView()
+        dateFormatter.amSymbol = "오전"
+        dateFormatter.pmSymbol = "오후"
+        dateFormatter.dateFormat = "a hh시 mm분"
+        hourText = dateFormatter.string(from: now as Date)
+        
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        presentHour = dateFormatter.string(from: now as Date)
+        
+    }
+    @IBAction func touchUpDatePickerBtn(_ sender: UIButton) {
+        animatePopupBackground(true)
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "CreateDatePickerVC") as? CreateDatePickerVC else { return }
+        
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true)
     }
     
+    private func setPopupBackgroundView() {
+        
+        popupBackgroundView.isHidden = true
+        popupBackgroundView.alpha = 0
+        self.view.bringSubviewToFront(popupBackgroundView)
+        NotificationCenter.default.addObserver(self, selector: #selector(didDisappearPopup), name: .init("popup"), object: nil)
+    }
+    
+    func animatePopupBackground(_ direction: Bool) {
+        
+        let duration: TimeInterval = direction ? 0.35 : 0.15
+        let alpha: CGFloat = direction ? 0.54 : 0.0
+        self.popupBackgroundView.isHidden = !direction
+        UIView.animate(withDuration: duration) {
+            self.popupBackgroundView.alpha = alpha
+        }
+        
+    }
+    
+    @objc func didDisappearPopup(_ notification: Notification) {
+        
+        let dateFormatter : DateFormatter = DateFormatter()
+        
+        animatePopupBackground(false)
+        
+        guard let info = notification.userInfo as? [String: Any] else { return }
+        guard let hour = info["hour"] as? String else { return }
+        guard let minute = info["minute"] as? String else {return}
+        guard let ampm = info["ampm"] as? String else {return}
+        
+        dateFormatter.dateFormat = "a h:mm"
+        
+        dateFormatter.amSymbol = "오전"
+        dateFormatter.pmSymbol = "오후"
+        
+    
+        
+        hourText = "\(ampm)" + " " + "\(hour)" + "시"  + " " + "\(minute)" + "분"
+        
+        dateFormatter.dateFormat = "2020-11-22 11:30:15"
+        finalhourText = dateFormatter.dateFormat
+        print("파이널",finalhourText)
+        
+        createMashmallowTV.reloadSections(IndexSet(integer: 0), with: .none)
+    }
     
     /*
      // MARK: - Navigation
@@ -31,9 +103,47 @@ class MashmallowCreateVC: UIViewController {
      }
      */
     @IBAction func touchUpCompleteBtn(_ sender: UIButton) {
+        mycount += 1
         toDoListArray.append("")
-        createMashmallowTV.reloadData()
+        createMashmallowTV.reloadSections(IndexSet(integer: 2), with: .none)
     }
+    
+    
+    @IBAction func realCompleteBtn(_ sender: UIButton) {
+        realToDoArray.append("안녕")
+        realToDoArray.append("나는")
+        realToDoArray.append("지은")
+        realToDoArray.append("이야")
+        realToDoArray = realToDoArray.filter{$0 != ""}
+        print(realToDoArray)
+        
+        
+        JoinRoomService.shared.joinRoom(title: goalText, startTime: presentHour, limitTime: finalhourText, completion: { [self] result in
+            switch result {
+            case .success:
+                print("성공")
+            case .requestErr(let msg):
+                print("dd",goalText)
+                print("dd",presentHour)
+                print("dd",finalhourText)
+                print(msg)
+            case .pathErr:
+                print("path")
+                break
+            case .serverErr:
+                print("server")
+                break
+            case .networkFail:
+                print("network")
+                break
+            }
+            
+        })
+        
+        
+    }
+    
+    
     
 }
 
@@ -53,7 +163,7 @@ extension MashmallowCreateVC:UITableViewDelegate,UITableViewDataSource{
             return 1
         }
         else if section == 2 {
-            return toDoListArray.count
+            return 4
         }
         else {
             return 1
@@ -69,6 +179,9 @@ extension MashmallowCreateVC:UITableViewDelegate,UITableViewDataSource{
             goalCell.goalTextfield
                 .setLeftPaddingPoints(16)
             
+            goalCell.limitTimeBtn.setTitle(hourText, for: .normal)
+            
+            goalText = "행복한 마시멜로 이야기"
             return goalCell
             
         }
@@ -88,6 +201,9 @@ extension MashmallowCreateVC:UITableViewDelegate,UITableViewDataSource{
             let toDoListCell = tableView.dequeueReusableCell(withIdentifier: "SetToDoListTVCell") as! SetToDoListTVCell
             toDoListCell.setToDoListTextField.layer.cornerRadius = 16
             toDoListCell.setToDoListTextField.setLeftPaddingPoints(16)
+            realToDoArray.append(toDoListCell.setToDoListTextField.text!)
+            
+            print(realToDoArray)
             
             return toDoListCell
         }
@@ -136,5 +252,7 @@ extension UITextField {
         self.rightView = paddingView
         self.rightViewMode = .always
     }
+    
+    
 }
 

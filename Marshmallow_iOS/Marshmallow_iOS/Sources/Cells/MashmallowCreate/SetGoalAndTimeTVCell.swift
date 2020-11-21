@@ -7,10 +7,16 @@
 
 import UIKit
 
-class SetGoalAndTimeTVCell: UITableViewCell {
 
+
+class SetGoalAndTimeTVCell: UITableViewCell {
+    
+   
     @IBOutlet var goalTextfield: UITextField!
     @IBOutlet var limitTimeBtn: UIButton!
+    
+    
+  
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,4 +34,7 @@ class SetGoalAndTimeTVCell: UITableViewCell {
         //데이트피커 띄우기
     }
     
+    
+    
 }
+
