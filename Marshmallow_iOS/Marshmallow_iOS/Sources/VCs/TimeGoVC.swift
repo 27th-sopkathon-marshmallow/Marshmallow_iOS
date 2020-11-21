@@ -28,11 +28,12 @@ class TimeGoVC: UIViewController {
     
     
     var timer = Timer()
-    static var endTimeString = "2020-11-22 05:00:00"
+    static var endTimeString = "2020-11-22 06:00:00"
     static var startTimeString = "2020-11-22 03:53:40"
     
     static var endTime : Date?
     static var startTime : Date?
+    static var participants : [String] = []
     
     var circularView = CircularProgressView()
     
@@ -134,10 +135,14 @@ class TimeGoVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setItems()
+        
+        
         wholeCV.dataSource = self
         wholeCV.delegate = self
         
-        setItems()
+        
         // Do any additional setup after loading the view.
     }
     
@@ -153,6 +158,45 @@ class TimeGoVC: UIViewController {
     //MARK:- User Define Functions
     
     func setItems(){
+        
+        GetRoomInfoService.shared.getRoomInfo { networkResult -> Void in
+            switch networkResult {
+            case .success(let data) :
+                if let roomData = data as? GetRoomInfoData{
+                    TimeGoVC.startTimeString = roomData.startTime
+                    TimeGoVC.endTimeString = roomData.limitTime
+                    self.titleLabel.text = roomData.title
+                    
+                    for p in roomData.participant {
+                        TimeGoVC.participants.append(p.nickname)
+                        
+                        
+                    }
+                    
+                    
+                    
+                }
+                
+            case .requestErr(let msg):
+                if let message = msg as? String {
+                   print(message)
+                }
+            case .pathErr :
+                print("pathErr")
+            case .serverErr :
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            
+                
+                
+            
+            }
+            
+            
+        }
+        
+        
         titleLabel.text = "오후 7시 축구 경기"
         let date = Date()
         let formatter = DateFormatter()
