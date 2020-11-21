@@ -1,24 +1,21 @@
 //
-//  GetRoomInfoService.swift
+//  GetResultService.swift
 //  Marshmallow_iOS
 //
 //  Created by Yunjae Kim on 2020/11/22.
 //
 
 import Foundation
-
 import Alamofire
 
-
-
-struct GetRoomInfoService {
-    static let shared = GetRoomInfoService()
+struct GetResultService {
+    static let shared = GetResultService()
    
     
     func getRoomInfo(id : Int, completion : @escaping (NetworkResult<Any>) -> Void) {
         let header : HTTPHeaders = ["Content-Type" : "application/json"]
         
-        let dataRequest = AF.request(APIConstants.roomInfoURL+String(id),
+        let dataRequest = AF.request(APIConstants.roomInfoURL+String(id)+"/finish",
                                      method: .get,
                                      encoding: JSONEncoding.default,
                                      headers: header)
@@ -59,7 +56,7 @@ struct GetRoomInfoService {
     func judgeRoomInfo(statusCode : Int , data : Data) -> NetworkResult<Any> {
         let decoder = JSONDecoder()
         
-        guard let decodedData = try? decoder.decode(GenericResponse<GetRoomInfoData>.self, from : data) else{
+        guard let decodedData = try? decoder.decode(GenericResponse<GetResultData>.self, from : data) else{
          
            
             return .pathErr
@@ -89,5 +86,5 @@ struct GetRoomInfoService {
     
     
 }
-
-
+    
+    

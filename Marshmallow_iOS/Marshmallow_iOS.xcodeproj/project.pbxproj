@@ -19,14 +19,12 @@
 		33DCB411256965B100DDF92B /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB410256965B100DDF92B /* Cells.swift */; };
 		33DCB414256965BC00DDF92B /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB413256965BC00DDF92B /* Fonts.swift */; };
 		33DCB417256965DE00DDF92B /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB416256965DE00DDF92B /* APIConstants.swift */; };
-
 		33DCB41B256970AC00DDF92B /* MashmallowCreate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33DCB41A256970AC00DDF92B /* MashmallowCreate.storyboard */; };
 		33DCB41E256970EF00DDF92B /* MashmallowCreateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB41D256970EF00DDF92B /* MashmallowCreateVC.swift */; };
 		33DCB422256974A000DDF92B /* SetGoalAndTimeTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB421256974A000DDF92B /* SetGoalAndTimeTVCell.swift */; };
 		33DCB426256974E400DDF92B /* SetNicknameTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB425256974E400DDF92B /* SetNicknameTVCell.swift */; };
 		33DCB4292569750900DDF92B /* SetToDoListTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB4282569750900DDF92B /* SetToDoListTVCell.swift */; };
 		33DCB43225697AB000DDF92B /* CompleteBtnTouchTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB43125697AB000DDF92B /* CompleteBtnTouchTVCell.swift */; };
-
 		ECDA3C4E25696990000554A5 /* TimeGo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECDA3C4D25696990000554A5 /* TimeGo.storyboard */; };
 		ECDA3C51256969AB000554A5 /* TimeGoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C50256969AB000554A5 /* TimeGoVC.swift */; };
 		ECDA3C5525696EDD000554A5 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C5425696EDD000554A5 /* CircularProgressView.swift */; };
@@ -41,7 +39,11 @@
 		ECDA3C792569A9FC000554A5 /* NetworkResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C782569A9FC000554A5 /* NetworkResults.swift */; };
 		ECDA3C7C2569AAE9000554A5 /* GetRoomInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C7B2569AAE9000554A5 /* GetRoomInfoData.swift */; };
 		ECDA3C7F2569B42E000554A5 /* GetResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C7E2569B42E000554A5 /* GetResultData.swift */; };
-
+		ECDA3C842569BBCB000554A5 /* GetResultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C832569BBCB000554A5 /* GetResultService.swift */; };
+		ECDA3C872569BDE0000554A5 /* MakeRoomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C862569BDE0000554A5 /* MakeRoomData.swift */; };
+		ECDA3C8A2569BDFF000554A5 /* MakeRoomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C892569BDFF000554A5 /* MakeRoomService.swift */; };
+		ECDA3C8D2569C000000554A5 /* JoinRoomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C8C2569C000000554A5 /* JoinRoomData.swift */; };
+		ECDA3C902569C016000554A5 /* JoinRoomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA3C8F2569C016000554A5 /* JoinRoomService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +82,11 @@
 		ECDA3C782569A9FC000554A5 /* NetworkResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResults.swift; sourceTree = "<group>"; };
 		ECDA3C7B2569AAE9000554A5 /* GetRoomInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRoomInfoData.swift; sourceTree = "<group>"; };
 		ECDA3C7E2569B42E000554A5 /* GetResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetResultData.swift; sourceTree = "<group>"; };
+		ECDA3C832569BBCB000554A5 /* GetResultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetResultService.swift; sourceTree = "<group>"; };
+		ECDA3C862569BDE0000554A5 /* MakeRoomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeRoomData.swift; sourceTree = "<group>"; };
+		ECDA3C892569BDFF000554A5 /* MakeRoomService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeRoomService.swift; sourceTree = "<group>"; };
+		ECDA3C8C2569C000000554A5 /* JoinRoomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRoomData.swift; sourceTree = "<group>"; };
+		ECDA3C8F2569C016000554A5 /* JoinRoomService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRoomService.swift; sourceTree = "<group>"; };
 		F599855D0854E638CB77B407 /* Pods-Marshmallow_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marshmallow_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Marshmallow_iOS/Pods-Marshmallow_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,12 +159,9 @@
 			isa = PBXGroup;
 			children = (
 				33DCB3DF2569634500DDF92B /* ViewController.swift */,
-
 				33DCB41D256970EF00DDF92B /* MashmallowCreateVC.swift */,
-
 				ECDA3C50256969AB000554A5 /* TimeGoVC.swift */,
 				ECDA3C7225699BDB000554A5 /* InviteModalVC.swift */,
-
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -167,11 +171,8 @@
 			children = (
 				33DCB3E62569634600DDF92B /* LaunchScreen.storyboard */,
 				33DCB3E12569634500DDF92B /* Main.storyboard */,
-
 				33DCB41A256970AC00DDF92B /* MashmallowCreate.storyboard */,
-
 				ECDA3C4D25696990000554A5 /* TimeGo.storyboard */,
-
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -182,6 +183,9 @@
 				33DCB416256965DE00DDF92B /* APIConstants.swift */,
 				ECDA3C752569A829000554A5 /* GetRoomInfoService.swift */,
 				ECDA3C782569A9FC000554A5 /* NetworkResults.swift */,
+				ECDA3C832569BBCB000554A5 /* GetResultService.swift */,
+				ECDA3C892569BDFF000554A5 /* MakeRoomService.swift */,
+				ECDA3C8F2569C016000554A5 /* JoinRoomService.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -223,6 +227,8 @@
 				33DCB4012569658500DDF92B /* GenericResponse.swift */,
 				ECDA3C7B2569AAE9000554A5 /* GetRoomInfoData.swift */,
 				ECDA3C7E2569B42E000554A5 /* GetResultData.swift */,
+				ECDA3C862569BDE0000554A5 /* MakeRoomData.swift */,
+				ECDA3C8C2569C000000554A5 /* JoinRoomData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -380,34 +386,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				33DCB414256965BC00DDF92B /* Fonts.swift in Sources */,
-
 				33DCB426256974E400DDF92B /* SetNicknameTVCell.swift in Sources */,
 				33DCB4062569658F00DDF92B /* File.swift in Sources */,
+				ECDA3C842569BBCB000554A5 /* GetResultService.swift in Sources */,
 				33DCB411256965B100DDF92B /* Cells.swift in Sources */,
 				33DCB4022569658500DDF92B /* GenericResponse.swift in Sources */,
 				33DCB41E256970EF00DDF92B /* MashmallowCreateVC.swift in Sources */,
 				33DCB43225697AB000DDF92B /* CompleteBtnTouchTVCell.swift in Sources */,
 				33DCB4292569750900DDF92B /* SetToDoListTVCell.swift in Sources */,
-
 				ECDA3C51256969AB000554A5 /* TimeGoVC.swift in Sources */,
 				ECDA3C7F2569B42E000554A5 /* GetResultData.swift in Sources */,
 				33DCB4062569658F00DDF92B /* File.swift in Sources */,
+				ECDA3C902569C016000554A5 /* JoinRoomService.swift in Sources */,
 				33DCB411256965B100DDF92B /* Cells.swift in Sources */,
 				33DCB4022569658500DDF92B /* GenericResponse.swift in Sources */,
 				ECDA3C5F2569742F000554A5 /* TimeGoUnderCVC.swift in Sources */,
-
 				33DCB417256965DE00DDF92B /* APIConstants.swift in Sources */,
 				ECDA3C762569A829000554A5 /* GetRoomInfoService.swift in Sources */,
 				33DCB422256974A000DDF92B /* SetGoalAndTimeTVCell.swift in Sources */,
 				33DCB3E02569634500DDF92B /* ViewController.swift in Sources */,
+				ECDA3C8D2569C000000554A5 /* JoinRoomData.swift in Sources */,
 				33DCB3DC2569634500DDF92B /* AppDelegate.swift in Sources */,
 				ECDA3C7325699BDB000554A5 /* InviteModalVC.swift in Sources */,
 				ECDA3C5525696EDD000554A5 /* CircularProgressView.swift in Sources */,
 				ECDA3C7025698C7F000554A5 /* UIViewExtensions.swift in Sources */,
 				33DCB3DE2569634500DDF92B /* SceneDelegate.swift in Sources */,
 				ECDA3C5C256973E5000554A5 /* TimeGoUsersCVC.swift in Sources */,
+				ECDA3C872569BDE0000554A5 /* MakeRoomData.swift in Sources */,
 				ECDA3C7C2569AAE9000554A5 /* GetRoomInfoData.swift in Sources */,
 				ECDA3C592569735C000554A5 /* TimeGoWholeCVC.swift in Sources */,
+				ECDA3C8A2569BDFF000554A5 /* MakeRoomService.swift in Sources */,
 				ECDA3C6225697532000554A5 /* TimeGoTodoCVC.swift in Sources */,
 				ECDA3C792569A9FC000554A5 /* NetworkResults.swift in Sources */,
 				ECDA3C6D25698947000554A5 /* UIColor_Extension.swift in Sources */,

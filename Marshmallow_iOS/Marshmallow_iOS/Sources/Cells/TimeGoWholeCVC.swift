@@ -13,7 +13,6 @@ class TimeGoWholeCVC: UICollectionViewCell {
     @IBOutlet weak var userCV: UICollectionView!
     
     
-    var userNames = ["1","2","3","4","5","6","7"]
     var profileImages = ["challengeImgProfile1","challengeImgProfile2","challengeImgProfile3","challengeImgProfile4","challengeImgProfile5","challengeImgProfile6","challengeImgProfile7"]
     
     override func awakeFromNib() {
@@ -41,7 +40,7 @@ extension TimeGoWholeCVC : UICollectionViewDelegate {
 
 extension TimeGoWholeCVC : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return userNames.count
+        return TimeGoVC.participants.count
         
         
     }
@@ -54,7 +53,7 @@ extension TimeGoWholeCVC : UICollectionViewDataSource {
             
             return UICollectionViewCell()}
         
-        cell.setUser(profileURL: profileImages[indexPath.item], userName: userNames[indexPath.item])
+        cell.setUser(profileURL: profileImages[indexPath.item], userName: TimeGoVC.participants[indexPath.item])
         
         
         return cell
