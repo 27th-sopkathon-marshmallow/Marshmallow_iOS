@@ -13,6 +13,7 @@ class ResultVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         resultTableView.dataSource = self
+        
         // Do any additional setup after loading the view.
     }
 }
