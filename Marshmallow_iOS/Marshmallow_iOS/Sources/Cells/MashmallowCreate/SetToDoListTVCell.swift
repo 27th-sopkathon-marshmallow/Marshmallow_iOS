@@ -7,23 +7,30 @@
 
 import UIKit
 
-class SetToDoListTVCell: UITableViewCell {
-    
-    
-    @IBOutlet var setToDoListTextField: UITextField!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        
-        // Initialization code
-    }
 
+
+class SetToDoListTVCell: UITableViewCell,UITextFieldDelegate {
+
+   
+    @IBOutlet var setToDoListTextField: UITextField!
+    var queryArray:[String] = []
+   
+    override class func awakeFromNib() {
+        
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    
+ 
+  
+    
 }
 
+
+
+  
+   
